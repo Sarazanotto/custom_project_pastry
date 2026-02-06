@@ -1,9 +1,19 @@
-import "./App.css";
+import { ConfigProvider } from "antd";
+import Header from "./layout/header/Header";
+import defaultTheme from "../styles/theme";
+
 
 function App() {
-  return <>
-  <h1>CIAO</h1>
-  </>;
+  return (
+    <>
+      <ConfigProvider theme={defaultTheme}>
+        <div className="container">
+     <Header />
+        </div>
+   
+      </ConfigProvider>
+    </>
+  );
 }
 
 export default App;
