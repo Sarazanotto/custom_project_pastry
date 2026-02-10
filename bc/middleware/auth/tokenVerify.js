@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-const EXCLUDED_ROUTES = ["/login", "/user"];
+const EXCLUDED_ROUTES = ["/login", "/user",'/cakes'];
 
 const verifyToken = (req, res, next) => {
   if (EXCLUDED_ROUTES.includes(req.path)) return next();

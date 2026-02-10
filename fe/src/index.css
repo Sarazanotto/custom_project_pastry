@@ -1,5 +1,44 @@
-.container{
-  width: 100%;
-  padding: 0 50px;
+* {
+  box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
+
+#root {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.layout-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+.layout-content{
+  flex: 1;
+
+ 
+}
+.layout-footer{
+  margin-top: auto;
+}
+
+h2{
+  color: #361a00;
+}
+
+a{
+  color: #8e694d;
+}
+
+a:hover{
+  color: #361a00;
 }

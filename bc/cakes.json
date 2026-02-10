@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Saint Honoré",
+    "image": "https://images.unsplash.com/photo-1601972599720-0b8f3c1f2f88",
+    "description": "Classica torta francese con base di pasta sfoglia, bignè caramellati e crema chantilly.",
+    "price": "32€",
+    "category": "Classiche",
+    "ingredients": ["pasta sfoglia", "bignè", "crema pasticcera", "panna", "zucchero"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Millefoglie",
+    "image": "https://images.unsplash.com/photo-1612198790700-0ff0c6d99cfa",
+    "description": "Sfoglie croccanti alternate a crema pasticcera fresca.",
+    "price": "30€",
+    "category": "Classiche",
+    "ingredients": ["pasta sfoglia", "latte", "uova", "zucchero", "vaniglia"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Meringata",
+    "image": "https://images.unsplash.com/photo-1620980776848-84ac10194945",
+    "description": "Strati di meringa croccante e panna montata fresca.",
+    "price": "28€",
+    "category": "Classiche",
+    "ingredients": ["albumi", "zucchero", "panna fresca"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Cheesecake",
+    "image": "https://images.unsplash.com/photo-1562440499-64c9a111f713",
+    "description": "Cheesecake cremosa con base biscotto e topping delicato.",
+    "price": "26€",
+    "category": "Classiche",
+    "ingredients": ["formaggio spalmabile", "biscotti", "burro", "zucchero"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Tiramisù",
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
+    "description": "Il grande classico italiano al caffè e mascarpone.",
+    "price": "26€",
+    "category": "Classiche",
+    "ingredients": ["mascarpone", "uova", "savoiardi", "caffè", "cacao"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Diplomatica",
+    "image": "https://images.unsplash.com/photo-1603532648955-039310d9ed75",
+    "description": "Pasta sfoglia, pan di Spagna e crema diplomatica.",
+    "price": "30€",
+    "category": "Classiche",
+    "ingredients": ["pasta sfoglia", "pan di spagna", "crema pasticcera", "panna"],
+    "cakeServings": 8
+  },
+
+  {
+    "name": "Brownie al Cioccolato",
+    "image": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52",
+    "description": "Brownie fondente, umido e intenso.",
+    "price": "24€",
+    "category": "Voglia di Cioccolato",
+    "ingredients": ["cioccolato fondente", "burro", "uova", "zucchero", "farina"],
+    "cakeServings": 6
+  },
+  {
+    "name": "Sacher",
+    "image": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51",
+    "description": "Torta al cioccolato con confettura di albicocche.",
+    "price": "30€",
+    "category": "Voglia di Cioccolato",
+    "ingredients": ["cioccolato fondente", "uova", "burro", "albicocche"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Meringata al Cioccolato",
+    "image": "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7",
+    "description": "Meringa e panna con scaglie di cioccolato fondente.",
+    "price": "29€",
+    "category": "Voglia di Cioccolato",
+    "ingredients": ["meringa", "panna", "cioccolato fondente"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Torta Tartufata",
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
+    "description": "Torta ricca al cioccolato con ganache tartufata.",
+    "price": "32€",
+    "category": "Voglia di Cioccolato",
+    "ingredients": ["cioccolato", "panna", "uova", "burro"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Torta ai Tre Cioccolati",
+    "image": "https://images.unsplash.com/photo-1542826438-5b6c6f1b03c4",
+    "description": "Tre strati di mousse: fondente, latte e bianco.",
+    "price": "34€",
+    "category": "Voglia di Cioccolato",
+    "ingredients": ["cioccolato fondente", "cioccolato al latte", "cioccolato bianco", "panna"],
+    "cakeServings": 8
+  },
+
+  {
+    "name": "Crostata di Frutta",
+    "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187",
+    "description": "Base di frolla con crema e frutta fresca di stagione.",
+    "price": "28€",
+    "category": "Torte alla Frutta",
+    "ingredients": ["pasta frolla", "crema pasticcera", "frutta fresca"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Frolla ai Frutti di Bosco",
+    "image": "https://images.unsplash.com/photo-1599785209707-28cfa8d6c7c1",
+    "description": "Crostata con confettura e frutti di bosco.",
+    "price": "27€",
+    "category": "Torte alla Frutta",
+    "ingredients": ["pasta frolla", "frutti di bosco", "zucchero"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Pavlova",
+    "image": "https://images.unsplash.com/photo-1603532648955-1b8c6c9f5e64",
+    "description": "Meringa croccante fuori e morbida dentro con frutta fresca.",
+    "price": "29€",
+    "category": "Torte alla Frutta",
+    "ingredients": ["albumi", "zucchero", "panna", "frutta fresca"],
+    "cakeServings": 8
+  },
+
+  {
+    "name": "Torta Moderna al Pistacchio",
+    "image": "https://images.unsplash.com/photo-1616541823729-00fe0aacd32c",
+    "description": "Mousse al pistacchio con cuore cremoso.",
+    "price": "36€",
+    "category": "Torte Moderne",
+    "ingredients": ["pistacchio", "panna", "cioccolato bianco"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Entremet Lampone e Vaniglia",
+    "image": "https://images.unsplash.com/photo-1612198790700-7712efc61f0b",
+    "description": "Entremet moderno con contrasti freschi e delicati.",
+    "price": "38€",
+    "category": "Torte Moderne",
+    "ingredients": ["lampone", "vaniglia", "panna", "gelatina"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Torta Moderna Cioccolato Fondente",
+    "image": "https://images.unsplash.com/photo-1605475129364-8c6f8a0c2d4b",
+    "description": "Mousse intensa di cioccolato fondente.",
+    "price": "37€",
+    "category": "Torte Moderne",
+    "ingredients": ["cioccolato fondente", "panna", "burro"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Mousse Mango e Passion Fruit",
+    "image": "https://images.unsplash.com/photo-1614707267537-1c3d0b7c3c1a",
+    "description": "Torta moderna fresca ed esotica.",
+    "price": "36€",
+    "category": "Torte Moderne",
+    "ingredients": ["mango", "passion fruit", "panna"],
+    "cakeServings": 8
+  },
+  {
+    "name": "Nocciola e Caramello Salato",
+    "image": "https://images.unsplash.com/photo-1606312619070-2d4e6b7f8a91",
+    "description": "Equilibrio perfetto tra dolcezza e sapidità.",
+    "price": "38€",
+    "category": "Torte Moderne",
+    "ingredients": ["nocciole", "caramello", "cioccolato", "panna"],
+    "cakeServings": 8
+  }
+]

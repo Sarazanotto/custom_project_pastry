@@ -2,7 +2,7 @@ const cakeService = require("./cake.service");
 
 const getCakes = async (req, res, next) => {
   try {
-    const { page = 1, pageSize = 10 } = req.query;
+    const { page = 2, pageSize = 20 } = req.query;
     const { totalPages, totalCakes, cakes } = await cakeService.getAllCakes(
       page,
       pageSize,
