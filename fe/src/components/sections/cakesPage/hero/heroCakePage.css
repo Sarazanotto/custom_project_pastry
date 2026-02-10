@@ -1,0 +1,32 @@
+.section-hero-cake {
+  position: relative;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+.container-hero-cake {
+  width: 100vw;
+  height: 400px;
+}
+
+.container-hero-cake img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.container-text-hero-cake {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  text-align: start;
+  width: 400px;
+}
+
+.container-text-hero-cake Button {
+  width: 200px;
+  margin-top: 30px;
+}

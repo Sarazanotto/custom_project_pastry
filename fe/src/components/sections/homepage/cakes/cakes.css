@@ -1,0 +1,44 @@
+.container-section-cake {
+  padding: 60px 0;
+}
+
+.container-section-cake h2 {
+  padding: 10px 0;
+}
+
+.card-cake {
+  width: 200px;
+  border: 1px solid #ece9e1 !important;
+  box-shadow: 3px 3px 6px 2px #ece9e1cf;
+}
+
+.card-cake img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  padding: 2px;
+}
+
+.card-cake.ant-card-bordered {
+  border: none;
+}
+
+.card-cake p:nth-of-type(1) {
+  font-weight: bold;
+  height: 40px;
+}
+
+.card-cake p:nth-of-type(2) {
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.h2-link{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
