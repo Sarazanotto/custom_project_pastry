@@ -16,7 +16,10 @@ const getAllCakes = async (page, pageSize) => {
     totalPages,
   };
 };
-
+const cakeId= async(id)=>{
+  const cake= await CakeSchema.findById(id)
+  return cake
+}
 const createCake= async(body)=>{
   const newCake= new CakeSchema(body)
   return await newCake.save()
@@ -33,5 +36,6 @@ module.exports = {
   getAllCakes,
   createCake,
   modifyCake,
-  deleteCake
+  deleteCake,
+  cakeId
 };

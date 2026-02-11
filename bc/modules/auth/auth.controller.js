@@ -1,3 +1,4 @@
+const user = require("../user/user.route");
 const authService = require("./auth.service");
 
 const login = async (req, res, next) => {
@@ -7,6 +8,8 @@ const login = async (req, res, next) => {
       statusCode: 200,
       message: "Login succesfully",
       token: response.token,
+      
+      
     });
   } catch (error) {
     next(error);

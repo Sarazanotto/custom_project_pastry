@@ -2,13 +2,13 @@ const cakeService = require("./cake.service");
 
 const getCakes = async (req, res, next) => {
   try {
-    const { page = 2, pageSize = 20 } = req.query;
+    const { page = 1, pageSize = 20 } = req.query;
     const { totalPages, totalCakes, cakes } = await cakeService.getAllCakes(
       page,
       pageSize,
     );
     if (cakes.length === 0) {
-      throw new Error('not cake found');
+      throw new Error('There is not cakes');
     }
     res.status(200).send({
       statusCode: 200,
@@ -77,8 +77,31 @@ const deleteOne= async(req,res,next)=>{
   }
 }
 
+const getCakeId= async (req,res,next)=>{
+  try {
+    const {id}= req.query
+   if(!id){
+    return res.status(400).json({
+      statusCode:400,message: 'There is not ID'    })
+   }
+    const cake= await cakeService.cakeId(id)
+if(!cake){
+  return res.status(404).json({
+    statusCode:404, message:'Cake not found'
+  })
+}
+
+    res.status(200).json({
+      cake,
+      statusCode: 200,
+    });
+  } catch (error) {
+    next(error)
+  }
+}
 module.exports = {
   getCakes,
+  getCakeId,
   create,
   upload,
   modify,

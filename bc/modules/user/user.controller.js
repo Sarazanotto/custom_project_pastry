@@ -1,6 +1,16 @@
 const UserNotFound = require("../../exception/user/userNotFound");
 const userService = require("./user.service");
 
+const getUser = async (req, res, next) => {
+  try {
+    const user = await userService.getUserById(req.user.id);
+    res.status(200).json({
+      user,
+      statusCode: 200,
+    });
+  } catch (error) {next(error)}
+};
+
 const createUser = async (req, res, next) => {
   const { body } = req;
   try {
@@ -104,6 +114,7 @@ const getAllUsers = async (req, res, next) => {
   }
 };
 module.exports = {
+  getUser,
   createUser,
   upload,
   update,

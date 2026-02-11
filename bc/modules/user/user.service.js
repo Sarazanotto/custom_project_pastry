@@ -1,5 +1,7 @@
 const UserSchema = require("./user.schema");
 
+
+
 const createAdmin = async () => {
   const admin = await UserSchema.findOne({ role: "admin" });
   if (admin) return;
@@ -30,7 +32,7 @@ const getAllUsers = async (page, pageSize) => {
   };
 };
 
-const geUsertById = async (id) => {
+const getUserById = async (id) => {
   const user = await UserSchema.findById(id);
   return user;
 };
@@ -57,10 +59,11 @@ const deleteUser = async (id) => {
 
 module.exports = {
   getAllUsers,
-  geUsertById,
+  getUserById,
   getUserByEmailOrNumber,
   createUser,
   updateUser,
   deleteUser,
   createAdmin,
+
 };

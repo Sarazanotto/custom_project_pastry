@@ -4,6 +4,7 @@ const userController = require("./user.controller");
 const { uploadAvatar } = require("../../middleware/upload/index");
 const authAdmin = require("../../middleware/auth/adminAuth");
 
+user.get("/profile",userController.getUser)
 user.post("/user", userController.createUser);
 user.post("/user/avatar", uploadAvatar.single("avatar"), userController.upload);
 user.patch("/user/:id", userController.update);

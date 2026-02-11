@@ -19,7 +19,7 @@ const Address = new mongoose.Schema(
     },
     country: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
       default: "Italy",
     },
