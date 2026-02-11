@@ -1,6 +1,5 @@
 .section-hero {
   position: relative;
-
 width: 100%;
   overflow: hidden;
 }
@@ -22,9 +21,9 @@ width: 100%;
 
 .container-text-hero {
   position: absolute;
-  left: 20%;
-  top: 40%;
-  transform: translateX(-50%);
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
   text-align: start;
 }
 

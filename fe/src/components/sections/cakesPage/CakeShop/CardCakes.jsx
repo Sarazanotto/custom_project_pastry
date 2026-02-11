@@ -1,8 +1,18 @@
 import { Card, Col } from "antd";
-import React from "react";
+import ModalDetailCake from "./ModalDetailCake";
 
 import {HeartOutlined, ShoppingCartOutlined} from '@ant-design/icons'
-const CardCakes = ({img, title, description, price}) => {
+import { useState } from "react";
+const CardCakes = ({id,img, title, description, price}) => {
+  const[openModal, setOpenModal]= useState(false)
+
+  const showModal=()=>{
+     console.log("ID torta cliccata:", id); // <-- VERIFICA QUI
+    setOpenModal(true)
+  }
+  const closeModal=()=>{
+    setOpenModal(false)
+  }
   return (
     <Col>
       <Card className="card-cake"
@@ -14,7 +24,7 @@ const CardCakes = ({img, title, description, price}) => {
           />
         }
         actions={[
-            <HeartOutlined key='heart' />,
+            <span onClick={showModal}> Dettagli</span> ,
             <ShoppingCartOutlined key='cart' />
         ]}
       >
@@ -22,6 +32,8 @@ const CardCakes = ({img, title, description, price}) => {
         <p>{description}</p>
         <p>{price}</p>
       </Card>
+
+      <ModalDetailCake cakeId={id} open={openModal} onClose={closeModal} />
     </Col>
   );
 };

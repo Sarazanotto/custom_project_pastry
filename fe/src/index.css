@@ -1,13 +1,12 @@
 * {
   box-sizing: border-box;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-
 }
 
 #root {
@@ -15,30 +14,29 @@ body {
   overflow-x: hidden;
 }
 
-.layout-container{
+.layout-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-
-.layout-content{
+.layout-content {
   flex: 1;
-
- 
 }
-.layout-footer{
+.layout-footer {
   margin-top: auto;
 }
 
-h2{
+h2 {
   color: #361a00;
+  font-size: 1.7em;
 }
 
-a{
+a, .ant-btn-link{
   color: #8e694d;
 }
 
-a:hover{
-  color: #361a00;
+a:hover, .ant-btn-link:hover {
+  color: #361a00 !important;
 }
+

@@ -1,5 +1,5 @@
 .logo {
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-top: 10px;
 }
@@ -11,7 +11,8 @@
 
 .user-col {
   display: flex;
-  justify-content: end;
+  justify-content: center;
+
 }
 
 .links-width {
@@ -27,4 +28,31 @@
 
 .links-width .ant-menu-item {
   justify-content: center !important;
+}
+
+.ant-dropdown-trigger{
+  border: 1px solid #a88163;
+border-radius: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 5px 20px;
+transition: all 0.3 ease;
+box-shadow: none !important;
+cursor: pointer;
+}
+.ant-dropdown-trigger:hover{
+  background-color: #a88163;
+  border-color: #8b4513;
+}
+
+.menu-user-logged{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-user-logged p{
+  margin: 0;
+
 }

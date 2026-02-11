@@ -3,11 +3,14 @@
 }
 
 .container-shop-cake h2 {
- 
 margin-top: 40px;
 margin-bottom: 40px;
 }
 
+.ant-card-body{
+  padding: 10px 20px !important;
+
+}
 .card-cake {
   width: 200px;
   border: 1px solid #ece9e1 !important;
@@ -20,7 +23,9 @@ margin-bottom: 40px;
   object-fit: cover;
   padding: 2px;
 }
-
+.card-cake p{
+  margin: 10px;
+}
 .card-cake.ant-card-bordered {
   border: none;
 }

@@ -12,12 +12,12 @@ const AllCakes = () => {
     startLoading();
     try {
       const res = await fetch(`http://localhost:4545/cakes`);
-      console.log("Status:", res.status); // Debug
+      
       if (!res.ok) {
         throw new Error("Errore nel caricamento delle torte");
       }
       const data = await res.json();
-      console.log("DATA:", data, typeof data, Array.isArray(data));
+    
       setCakes(data.cakes);
     } catch (error) {
       console.error("ERRORE", error);
@@ -51,10 +51,11 @@ const groupByCategory=cakes.reduce((acc,cake)=>{
           {groupByCategory[category].map((cake) => (
             <CardCakes
               key={cake._id}
+              id={cake._id}
               img={cake.image}
               title={cake.name}
               description={cake.description}
-              price={`€${cake.price}`}
+              price={cake.price}
             />
           ))}
         </Row>

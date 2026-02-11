@@ -1,0 +1,24 @@
+
+.form-page{
+      min-height: 100vh; 
+}
+
+.card-login{
+    background-color: #ece9e1;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.social-icon{
+    padding: 10px 0 30px;
+}
+
+.social-icon .anticon svg{
+    font-size: 30px;
+    color: #a88163;
+}
+
+.card-login p{
+    text-align: center;
+}
