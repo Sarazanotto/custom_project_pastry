@@ -52,9 +52,48 @@ const Quote = new mongoose.Schema(
       type: String,
       required: false,
     },
-    deliveryData:{
-type: Date,
-required: true
+    deliveryData: {
+      type: Date,
+      required: true,
+    },
+    address: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "address",
+      required: false,
+    },
+    
+    priceQuoted: {
+      type: Number,
+      required: false,
+      min: 0,
+    },
+    adminNotes: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+
+    status: {
+      type: String,
+      enum: [
+        "pending",
+        "quoted",
+        "confirmed",
+        "rejected",
+        "in_progress",
+        "completed",
+        "cancelled",
+      ],
+      default: "pending",
+    },
+    isPaid: {
+      type: Boolean,
+      default: false,
+    },
+    stripePaymentId: { type: String, required: false },
+    paidAt: {
+      type: Date,
+      required: false,
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,

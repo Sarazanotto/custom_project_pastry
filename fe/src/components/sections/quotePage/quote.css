@@ -1,0 +1,46 @@
+.container-admin-notes {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10 0;
+}
+
+.container-status-quote{
+  border-radius: 20px;
+  margin-top:20px;
+}
+
+.container-status-quote p{
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin:0;
+}
+.status-confirmed {
+  border: 1px solid #b7eb8f;
+  color: green;
+}
+
+.status-rejected {
+  border: 1px solid #eb8f8f;
+  color: red;
+}
+
+
+.container-multistep{
+  padding: 50px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.steps-form{
+  margin-bottom:40px;
+}
+.content-form{
+  min-height:400px;
+}
+.actions-form{
+  margin-top:24px;
+  display:flex;
+  gap:10px
+}

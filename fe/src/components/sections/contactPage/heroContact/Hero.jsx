@@ -8,9 +8,9 @@ const HeroContact = () => {
         <img src="../../../../../assets/heroContact.jpg" alt="" />
       </div>
       <div className="container-text-hero-contact">
-        <h2>
+        <h1>
             Vieni a trovarci!
-        </h2>
+        </h1>
        </div>
     </Row>
   )

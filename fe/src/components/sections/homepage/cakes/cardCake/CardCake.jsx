@@ -1,23 +1,16 @@
 import { Card, Col } from "antd";
-import React from "react";
-import '../cakes.css'
-import {HeartOutlined, ShoppingCartOutlined} from '@ant-design/icons'
-const CardCake = ({img, title, description, price}) => {
+
+import "../cakes.css";
+
+const CardCake = ({ img, title, description }) => {
   return (
     <Col>
-      <Card className="card-cake"
-        cover={
-          <img 
-            draggable={false}
-            src={img}
-            alt={title}
-          />
-        }
-       
+      <Card
+        className="card-cake"
+        cover={<img draggable={false} src={img} alt={title} />}
       >
         <p>{title}</p>
         <p>{description}</p>
-        
       </Card>
     </Col>
   );

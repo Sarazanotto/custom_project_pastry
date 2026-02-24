@@ -1,5 +1,5 @@
 import { Col, Row } from "antd";
-import React from "react";
+
 import "./aboutUs.css";
 import {Link} from 'react-router-dom'
 const AboutUs = () => {

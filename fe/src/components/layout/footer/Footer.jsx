@@ -17,16 +17,7 @@ const Footer = () => {
           <img className="logo-footer" src="../../../../assets/logo.png" />
           <p>La tua pasticceria di fiducia</p>
         </Col>
-        <Col>
-          <h5>Link utili</h5>
-          <Space orientation="vertical" size="small">
-            <a href="/home">Home</a>
-            <a href="/cakes">Our cakes</a>
-
-            <a href="/about">About Us</a>
-            <a href="/contact">Contacts</a>
-          </Space>
-        </Col>
+        
         <Col orientation="vertical">
           <Space orientation="vertical" size="small">
             <span>

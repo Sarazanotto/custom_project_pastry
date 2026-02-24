@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcrypt= require('bcrypt')
+const bcrypt = require("bcrypt");
 const User = new mongoose.Schema(
   {
     firstName: {
@@ -33,11 +33,6 @@ const User = new mongoose.Schema(
       type: Date,
       required: false,
     },
-    avatar: {
-      type: String,
-      required: false,
-      default: "https://cdn.creazilla.com/icons/7912299/user-icon-md.png",
-    },
     address: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -52,44 +47,41 @@ const User = new mongoose.Schema(
         default: [],
       },
     ],
-    role:{
-      type:String,
-      enum:['admin','user'],
-      default: 'user'
-    }
+    role: {
+      type: String,
+      enum: ["admin", "user"],
+      default: "user",
+    },
   },
   { timestamps: true, strict: true },
 );
 
 User.pre("save", async function () {
   if (!this.isModified("password")) {
-    return; //andiamo avanti e vado al save
+    return;
   }
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-//quando chiama query mongoose usa metodi
-
 User.pre("findOneAndUpdate", async function () {
-  const update = this.getUpdate(); //ci ritona in json solo quello che è stato modificato
+  const update = this.getUpdate();
   if (!update) {
     return;
   }
-  const plainPassword = update.password ?? update.$set.password; //pssw dal body o dall'operatore set
+  const plainPassword = update.password ?? update.$set.password;
   if (!plainPassword) return;
   const salt = await bcrypt.genSalt(10);
   const hashed = await bcrypt.hash(plainPassword, salt);
 
   if (update.password) {
-    //se update.pssw è stata modificata  metti pssw hashata
     update.password = hashed;
   }
 
   if (update.$set.password) {
     update.$set.password = hashed;
   }
-  this.setUpdate(update); //setupdate va a scriver questo oggetto json e lo aggiorna
+  this.setUpdate(update);
 });
 
 module.exports = mongoose.model("user", User, "users");

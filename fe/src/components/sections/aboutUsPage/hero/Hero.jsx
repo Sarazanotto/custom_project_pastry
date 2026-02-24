@@ -8,9 +8,9 @@ const Hero = () => {
         <img src="../../../../../assets/hero.jpg" alt="" />
       </div>
       <div className="container-text-hero-about">
-        <h2>
+        <h1>
             About Us
-        </h2>
+        </h1>
        </div>
     </Row>
   )

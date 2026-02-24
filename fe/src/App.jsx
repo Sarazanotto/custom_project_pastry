@@ -8,6 +8,11 @@ import Login from "./pages/Login";
 import About from "./pages/About";
 import ShopCakes from "./pages/ShopCakes";
 import Contact from "./pages/Contact";
+import Profile from "./pages/Profile";
+import OrderUser from "./pages/OrderUser";
+
+import QuoteNew from "./pages/QuoteNew";
+import AdminOrdersPage from "./pages/AdminOrdersPage";
 
 
 function App() {
@@ -46,6 +51,38 @@ function App() {
             element={
               <Layout>
                 <Contact />
+              </Layout>
+            }
+          />
+    <Route           
+            path="/profile"
+            element={
+              <Layout>
+              <Profile/>
+              </Layout>
+            }
+          />
+    <Route           
+            path="/quote/new"
+            element={
+              <Layout>
+              <QuoteNew/>
+              </Layout>
+            }
+          />
+    <Route           
+            path="/orders"
+            element={
+              <Layout>
+              <OrderUser/>
+              </Layout>
+            }
+          />
+    <Route           
+            path="/admin/orders"
+            element={
+              <Layout>
+              <AdminOrdersPage/>
               </Layout>
             }
           />

@@ -1,176 +1,186 @@
 [
   {
-    "name": "Saint Honoré",
-    "image": "https://images.unsplash.com/photo-1601972599720-0b8f3c1f2f88",
-    "description": "Classica torta francese con base di pasta sfoglia, bignè caramellati e crema chantilly.",
-    "price": "32€",
-    "category": "Classiche",
-    "ingredients": ["pasta sfoglia", "bignè", "crema pasticcera", "panna", "zucchero"],
-    "cakeServings": 8
+    "name": "Royal Blanc",
+    "image": "https://images.unsplash.com/photo-1535254973040-607b474cb50d",
+    "description": "Torta nuziale a tre piani rivestita in pasta di zucchero bianco avorio con decorazioni floreali in sugar art. Farcita con crema al burro alla vaniglia Bourbon e confettura di lamponi. Ogni strato è sostenuto da strutture interne per una presentazione impeccabile. Eleganza senza tempo per il giorno più bello.",
+    "price": 180,
+    "category": "Matrimonio",
+    "ingredients": ["pan di spagna", "crema al burro", "vaniglia bourbon", "confettura di lamponi", "pasta di zucchero"],
+    "cakeServings": 50
   },
   {
-    "name": "Millefoglie",
-    "image": "https://images.unsplash.com/photo-1612198790700-0ff0c6d99cfa",
-    "description": "Sfoglie croccanti alternate a crema pasticcera fresca.",
-    "price": "30€",
-    "category": "Classiche",
-    "ingredients": ["pasta sfoglia", "latte", "uova", "zucchero", "vaniglia"],
-    "cakeServings": 8
+    "name": "Petal Gold",
+    "image": "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d",
+    "description": "Torta nuziale a due piani con texture in rilievo oro e petali di rose in pasta di zucchero dipinte a mano. Cuore morbido di mousse al cioccolato bianco e fragole fresche. Profumata alla rosa e al pistacchio per un gusto raffinato e originale. Ideale per matrimoni in stile romantico e lussuoso.",
+    "price": 160,
+    "category": "Matrimonio",
+    "ingredients": ["biscuit al pistacchio", "mousse cioccolato bianco", "fragole", "rosa alimentare", "pasta di zucchero dorata"],
+    "cakeServings": 40
   },
   {
-    "name": "Meringata",
-    "image": "https://images.unsplash.com/photo-1620980776848-84ac10194945",
-    "description": "Strati di meringa croccante e panna montata fresca.",
-    "price": "28€",
-    "category": "Classiche",
-    "ingredients": ["albumi", "zucchero", "panna fresca"],
-    "cakeServings": 8
+    "name": "Naked Cake Nuziale",
+    "image": "https://images.unsplash.com/photo-1567171466295-4afa63d45416",
+    "description": "Torta a vista con strati di pan di Spagna al limone e crema al mascarpone leggera. Decorata con fiori freschi edibili e frutti di bosco selezionati. Stile rustico-chic ideale per ricevimenti in villa o all'aperto. Un classico moderno che conquista per semplicità e bontà.",
+    "price": 140,
+    "category": "Matrimonio",
+    "ingredients": ["pan di spagna al limone", "mascarpone", "panna fresca", "frutti di bosco", "fiori edibili"],
+    "cakeServings": 40
   },
   {
-    "name": "Cheesecake",
-    "image": "https://images.unsplash.com/photo-1562440499-64c9a111f713",
-    "description": "Cheesecake cremosa con base biscotto e topping delicato.",
-    "price": "26€",
-    "category": "Classiche",
-    "ingredients": ["formaggio spalmabile", "biscotti", "burro", "zucchero"],
-    "cakeServings": 8
-  },
-  {
-    "name": "Tiramisù",
-    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
-    "description": "Il grande classico italiano al caffè e mascarpone.",
-    "price": "26€",
-    "category": "Classiche",
-    "ingredients": ["mascarpone", "uova", "savoiardi", "caffè", "cacao"],
-    "cakeServings": 8
-  },
-  {
-    "name": "Diplomatica",
-    "image": "https://images.unsplash.com/photo-1603532648955-039310d9ed75",
-    "description": "Pasta sfoglia, pan di Spagna e crema diplomatica.",
-    "price": "30€",
-    "category": "Classiche",
-    "ingredients": ["pasta sfoglia", "pan di spagna", "crema pasticcera", "panna"],
-    "cakeServings": 8
+    "name": "Élite Noir",
+    "image": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3",
+    "description": "Torta nuziale contemporanea a due piani in fondente nero lucido con dettagli in oro 24k. Farcita con ganache al cioccolato fondente e caramello salato artigianale. Per coppie che amano uno stile audace e sofisticato. Un capolavoro di design pasticcero.",
+    "price": 200,
+    "category": "Matrimonio",
+    "ingredients": ["sponge cake", "ganache fondente 70%", "caramello salato", "fondente nero", "oro alimentare 24k"],
+    "cakeServings": 45
   },
 
   {
-    "name": "Brownie al Cioccolato",
-    "image": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52",
-    "description": "Brownie fondente, umido e intenso.",
-    "price": "24€",
-    "category": "Voglia di Cioccolato",
-    "ingredients": ["cioccolato fondente", "burro", "uova", "zucchero", "farina"],
-    "cakeServings": 6
+    "name": "Nuvoletta Rosa",
+    "image": "https://images.unsplash.com/photo-1519340333755-56e9c1d04579",
+    "description": "Torta dal design soffice e onirico con glassa a onde rosa cipria e decorazioni a stelle dorate. Farcita con crema diplomatica alla vaniglia e pesche sciroppate. Perfetta per festeggiare il compleanno con stile e dolcezza. Un vero sogno per grandi e piccini.",
+    "price": 55,
+    "category": "Compleanno",
+    "ingredients": ["pan di spagna", "crema diplomatica", "pesche", "glassa rosa", "stelle dorate in zucchero"],
+    "cakeServings": 12
   },
   {
-    "name": "Sacher",
-    "image": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51",
-    "description": "Torta al cioccolato con confettura di albicocche.",
-    "price": "30€",
-    "category": "Voglia di Cioccolato",
-    "ingredients": ["cioccolato fondente", "uova", "burro", "albicocche"],
-    "cakeServings": 8
+    "name": "Torta del Re del Cioccolato",
+    "image": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d",
+    "description": "Un monumento al cioccolato con strati di brownie, mousse al cioccolato fondente e croccante pralinato. Rivestita di ganache lucida e decorata con shard di cioccolato artistici. Intensa, umida e irresistibile per ogni goloso. Il regalo perfetto per chi ama il cioccolato in tutte le sue forme.",
+    "price": 65,
+    "category": "Compleanno",
+    "ingredients": ["brownie", "mousse fondente", "pralinato nocciola", "ganache", "scaglie di cioccolato"],
+    "cakeServings": 12
   },
   {
-    "name": "Meringata al Cioccolato",
-    "image": "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7",
-    "description": "Meringa e panna con scaglie di cioccolato fondente.",
-    "price": "29€",
-    "category": "Voglia di Cioccolato",
-    "ingredients": ["meringa", "panna", "cioccolato fondente"],
-    "cakeServings": 8
-  },
-  {
-    "name": "Torta Tartufata",
-    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
-    "description": "Torta ricca al cioccolato con ganache tartufata.",
-    "price": "32€",
-    "category": "Voglia di Cioccolato",
-    "ingredients": ["cioccolato", "panna", "uova", "burro"],
-    "cakeServings": 8
-  },
-  {
-    "name": "Torta ai Tre Cioccolati",
-    "image": "https://images.unsplash.com/photo-1542826438-5b6c6f1b03c4",
-    "description": "Tre strati di mousse: fondente, latte e bianco.",
-    "price": "34€",
-    "category": "Voglia di Cioccolato",
-    "ingredients": ["cioccolato fondente", "cioccolato al latte", "cioccolato bianco", "panna"],
-    "cakeServings": 8
-  },
-
-  {
-    "name": "Crostata di Frutta",
+    "name": "Fresca Primavera",
     "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187",
-    "description": "Base di frolla con crema e frutta fresca di stagione.",
-    "price": "28€",
-    "category": "Torte alla Frutta",
-    "ingredients": ["pasta frolla", "crema pasticcera", "frutta fresca"],
-    "cakeServings": 8
+    "description": "Torta fresca e colorata con biscuit alle mandorle e crema mousseline al limone. Decorata con un mosaico di frutta fresca di stagione lucidata con gelatina neutra. Leggera e visivamente spettacolare, conquista al primo sguardo. Ideale per compleanni primaverili ed estivi.",
+    "price": 50,
+    "category": "Compleanno",
+    "ingredients": ["biscuit mandorle", "crema mousseline al limone", "frutta fresca mista", "gelatina neutra"],
+    "cakeServings": 10
   },
   {
-    "name": "Frolla ai Frutti di Bosco",
-    "image": "https://images.unsplash.com/photo-1599785209707-28cfa8d6c7c1",
-    "description": "Crostata con confettura e frutti di bosco.",
-    "price": "27€",
-    "category": "Torte alla Frutta",
-    "ingredients": ["pasta frolla", "frutti di bosco", "zucchero"],
-    "cakeServings": 8
-  },
-  {
-    "name": "Pavlova",
-    "image": "https://images.unsplash.com/photo-1603532648955-1b8c6c9f5e64",
-    "description": "Meringa croccante fuori e morbida dentro con frutta fresca.",
-    "price": "29€",
-    "category": "Torte alla Frutta",
-    "ingredients": ["albumi", "zucchero", "panna", "frutta fresca"],
-    "cakeServings": 8
+    "name": "Red Velvet Celebration",
+    "image": "https://images.unsplash.com/photo-1586788680434-30d324b2d46f",
+    "description": "Tre strati di soffice red velvet dal colore rosso brillante farciti con cream cheese frosting vellutato. Decorata con riccioli di pasta di zucchero e numero dell'età in oro. Un classico americano rivisitato in chiave italiana per un compleanno memorabile.",
+    "price": 58,
+    "category": "Compleanno",
+    "ingredients": ["farina", "cacao", "colorante rosso naturale", "cream cheese", "panna", "burro"],
+    "cakeServings": 12
   },
 
   {
-    "name": "Torta Moderna al Pistacchio",
-    "image": "https://images.unsplash.com/photo-1616541823729-00fe0aacd32c",
-    "description": "Mousse al pistacchio con cuore cremoso.",
-    "price": "36€",
-    "category": "Torte Moderne",
-    "ingredients": ["pistacchio", "panna", "cioccolato bianco"],
-    "cakeServings": 8
+    "name": "Angelo Celeste",
+    "image": "https://images.unsplash.com/photo-1559620192-032c4bc4674e",
+    "description": "Torta bianca e azzurra con decorazioni a tema angelico realizzate in pasta di zucchero dipinta a mano. Morbido pan di Spagna farcito con crema pasticcera alla vaniglia e albicocche. Delicata e poetica, esprime tutta la purezza del momento del Battesimo. Personalizzabile con nome e data del bambino.",
+    "price": 75,
+    "category": "Battesimo",
+    "ingredients": ["pan di spagna", "crema pasticcera", "albicocche", "pasta di zucchero bianca e celeste"],
+    "cakeServings": 20
   },
   {
-    "name": "Entremet Lampone e Vaniglia",
-    "image": "https://images.unsplash.com/photo-1612198790700-7712efc61f0b",
-    "description": "Entremet moderno con contrasti freschi e delicati.",
-    "price": "38€",
-    "category": "Torte Moderne",
-    "ingredients": ["lampone", "vaniglia", "panna", "gelatina"],
-    "cakeServings": 8
+    "name": "Culle e Fiocchi",
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
+    "description": "Torta a due piani con fiocco tridimensionale in pasta di zucchero e decorazione a culla artigianale. Farcita con mousse alla fragola e panna fresca, su base di génoise al burro. Rosa per lei, azzurra per lui: eleganza delicata per un giorno indimenticabile. Ogni dettaglio è realizzato a mano dal nostro laboratorio.",
+    "price": 90,
+    "category": "Battesimo",
+    "ingredients": ["génoise", "mousse alla fragola", "panna fresca", "pasta di zucchero colorata"],
+    "cakeServings": 25
   },
   {
-    "name": "Torta Moderna Cioccolato Fondente",
-    "image": "https://images.unsplash.com/photo-1605475129364-8c6f8a0c2d4b",
-    "description": "Mousse intensa di cioccolato fondente.",
-    "price": "37€",
-    "category": "Torte Moderne",
-    "ingredients": ["cioccolato fondente", "panna", "burro"],
-    "cakeServings": 8
+    "name": "Stelle di Luce",
+    "image": "https://images.unsplash.com/photo-1562777717-dc6984f65a63",
+    "description": "Torta elegante in bianco perlato con stelle e luna in sugar art dorata, ispirata al cielo notturno. Farcita con crema al latte e gocce di cioccolato bianco profumata alla vaniglia. Un design magico e sognante per celebrare l'arrivo di una nuova vita. Perfetta sia per battesimo che per gender reveal.",
+    "price": 80,
+    "category": "Battesimo",
+    "ingredients": ["pan di spagna", "crema al latte", "cioccolato bianco", "vaniglia", "pasta di zucchero perlata"],
+    "cakeServings": 20
   },
   {
-    "name": "Mousse Mango e Passion Fruit",
-    "image": "https://images.unsplash.com/photo-1614707267537-1c3d0b7c3c1a",
-    "description": "Torta moderna fresca ed esotica.",
-    "price": "36€",
-    "category": "Torte Moderne",
-    "ingredients": ["mango", "passion fruit", "panna"],
-    "cakeServings": 8
+    "name": "Orsetto Gourmet",
+    "image": "https://images.unsplash.com/photo-1603532648955-039310d9ed75",
+    "description": "Torta scenografica con orsetto in pasta di zucchero seduto sulla sommità, su base a pois pastello. Soffice interno al cocco e ananas caramellato per un gusto esotico e delicato. Un design tenero e allegro che cattura il cuore degli ospiti. Realizzata interamente a mano con cura artigianale.",
+    "price": 85,
+    "category": "Battesimo",
+    "ingredients": ["pan di spagna al cocco", "ananas caramellato", "panna", "pasta di zucchero"],
+    "cakeServings": 22
+  },
+
+  {
+    "name": "Croce d'Argento",
+    "image": "https://images.unsplash.com/photo-1608138278430-154d4b748f4c",
+    "description": "Torta elegante bianca con croce in rilievo argentata e bordi in pizzo di zucchero lavorato. Farcita con crema chantilly e visciole amarene in sciroppo per un gusto raffinato. Simbolo di purezza e fede, ideale per la Prima Comunione. Realizzabile su misura con nome e data della cerimonia.",
+    "price": 70,
+    "category": "Comunione",
+    "ingredients": ["pan di spagna", "chantilly", "amarene", "pasta di zucchero bianca", "argento alimentare"],
+    "cakeServings": 18
   },
   {
-    "name": "Nocciola e Caramello Salato",
-    "image": "https://images.unsplash.com/photo-1606312619070-2d4e6b7f8a91",
-    "description": "Equilibrio perfetto tra dolcezza e sapidità.",
-    "price": "38€",
-    "category": "Torte Moderne",
-    "ingredients": ["nocciole", "caramello", "cioccolato", "panna"],
-    "cakeServings": 8
+    "name": "Giglio Bianco",
+    "image": "https://images.unsplash.com/photo-1551404973-761c83cd8339",
+    "description": "Torta dalla forma cilindrica rivestita in fondente avorio con gigli in pasta di zucchero modellati a mano. Il cuore è una soffice génoise farcita con lemon curd e crema al burro alla vaniglia. Ispirata al fiore simbolo di purezza per eccellenza. Un omaggio raffinato a questo importante sacramento.",
+    "price": 75,
+    "category": "Comunione",
+    "ingredients": ["génoise", "lemon curd", "crema al burro", "fondente avorio", "gigli in pasta di zucchero"],
+    "cakeServings": 18
+  },
+  {
+    "name": "Libro Sacro",
+    "image": "https://images.unsplash.com/photo-1600337269671-a7b3b80b2a56",
+    "description": "Torta a forma di libro aperto con pagine in pasta di zucchero bianca e dettagli calligrafici dorati. Farcita con crema al pistacchio di Bronte e gelatina al mandarino. Un soggetto iconico e commovente per celebrare la Prima Comunione con stile. Ogni dettaglio è dipinto a mano dai nostri pasticceri.",
+    "price": 80,
+    "category": "Comunione",
+    "ingredients": ["pan di spagna", "crema al pistacchio", "gelatina al mandarino", "pasta di zucchero", "oro alimentare"],
+    "cakeServings": 20
+  },
+  {
+    "name": "Cuore di Fede",
+    "image": "https://images.unsplash.com/photo-1562777717-dc6984f65a63",
+    "description": "Torta a cuore doppio con glassa mirror bianca e decorazioni in perle di zucchero e dettagli sacri dorati. Farcita con mousse al cioccolato bianco e fragole profumate alla menta. Tenera nell'aspetto quanto nel sapore, perfetta per una giornata speciale. Personalizzabile con la foto del bambino in ostia edibile.",
+    "price": 72,
+    "category": "Comunione",
+    "ingredients": ["biscuit al burro", "mousse cioccolato bianco", "fragole", "menta", "glassa mirror"],
+    "cakeServings": 18
+  },
+
+  {
+    "name": "Spirito e Luce",
+    "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2",
+    "description": "Torta elegante a due piani con colomba e fiamma in pasta di zucchero dorata, simboli della Cresima. Farcita con crema al mascarpone e frutti di bosco su base di pan di Spagna al caffè. Raffinata e moderna, pensata per ragazzi e ragazze in questo importante passaggio di fede. Personalizzabile con nome e anno della cerimonia.",
+    "price": 95,
+    "category": "Cresima",
+    "ingredients": ["pan di spagna al caffè", "mascarpone", "frutti di bosco", "pasta di zucchero dorata"],
+    "cakeServings": 25
+  },
+  {
+    "name": "Fiamma Dorata",
+    "image": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3",
+    "description": "Torta moderna e scenografica con texture geometrica in fondente oro e fiamma tridimensionale in cima. Farcita con ganache al cioccolato al latte e pralinato alle nocciole piemontesi. Design contemporaneo e ricercato per chi vuole distinguersi. Un capolavoro di stile per il giorno della Cresima.",
+    "price": 100,
+    "category": "Cresima",
+    "ingredients": ["sponge cake", "ganache cioccolato al latte", "pralinato nocciola", "fondente oro"],
+    "cakeServings": 25
+  },
+  {
+    "name": "Mandorla e Miele",
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
+    "description": "Torta rustico-elegante con glassa a spatola bianca e decorazione floreale dorata in sugar art. Farcita con crema alle mandorle tostate e miele millefiori, profumata all'arancio. Un gusto autentico e intenso ispirato alla tradizione siciliana. Ideale per celebrare con sapori che parlano di territorio.",
+    "price": 88,
+    "category": "Cresima",
+    "ingredients": ["pan di spagna", "crema alle mandorle", "miele millefiori", "scorza d'arancio", "glassa bianca"],
+    "cakeServings": 22
+  },
+  {
+    "name": "Aquila di Luce",
+    "image": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51",
+    "description": "Torta con scultura di aquila in volo in pasta di zucchero dipinta a mano, simbolo di forza e crescita. Farcita con crema chantilly al limoncello e sfoglie di cioccolato croccante. Dedicata ai ragazzi che vivono questo importante sacramento con orgoglio. Un'opera d'arte commestibile da conservare nel ricordo.",
+    "price": 105,
+    "category": "Cresima",
+    "ingredients": ["biscuit", "chantilly al limoncello", "cioccolato croccante", "pasta di zucchero dipinta"],
+    "cakeServings": 25
   }
 ]

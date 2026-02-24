@@ -1,6 +1,5 @@
 const UserSchema = require("./user.schema");
-
-
+const AddressSchema = require("../address/address.schema");
 
 const createAdmin = async () => {
   const admin = await UserSchema.findOne({ role: "admin" });
@@ -19,7 +18,8 @@ const createAdmin = async () => {
 const getAllUsers = async (page, pageSize) => {
   const users = await UserSchema.find()
     .limit(pageSize)
-    .skip((page - 1) * pageSize);
+    .skip((page - 1) * pageSize)
+    .populate("address");
 
   const totalUsers = await UserSchema.countDocuments();
   const totalPages = Math.ceil(totalUsers / pageSize);
@@ -33,7 +33,7 @@ const getAllUsers = async (page, pageSize) => {
 };
 
 const getUserById = async (id) => {
-  const user = await UserSchema.findById(id);
+  const user = await UserSchema.findById(id).populate("address");
   return user;
 };
 
@@ -49,8 +49,25 @@ const createUser = async (body) => {
   return await newUser.save();
 };
 
-const updateUser = async (id, body) => {
-  return UserSchema.findByIdAndUpdate(id, body, { new: true });
+const updateUserWithAddresses = async (id, body) => {
+  const { address, ...otherData } = body;
+
+  if (address && Array.isArray(address)) {
+    await AddressSchema.deleteMany({ user: id });
+
+    if (address.length > 0) {
+      const newAddresses = await AddressSchema.insertMany(
+        address.map((addr) => ({ ...addr, user: id })),
+      );
+      otherData.address = newAddresses.map((a) => a._id);
+    } else {
+      otherData.address = [];
+    }
+  }
+
+  return UserSchema.findByIdAndUpdate(id, otherData, { new: true }).populate(
+    "address",
+  );
 };
 
 const deleteUser = async (id) => {
@@ -62,8 +79,7 @@ module.exports = {
   getUserById,
   getUserByEmailOrNumber,
   createUser,
-  updateUser,
+  updateUserWithAddresses,
   deleteUser,
   createAdmin,
-
 };

@@ -21,12 +21,22 @@ const UserMenu = ({ user, logout }) => {
     if (e.key === "manage-cakes") {
       navigate("/admin/cakes");
     }
+    if (e.key === "manage-order") {
+      navigate("/admin/orders");
+    }
   };
+  if (!user) {
+    return (
+      <Link to="/login">
+        <Button type="primary">Accedi/Registrati</Button>
+      </Link>
+    );
+  }
   const isAdmin = user?.user?.role === "admin";
 
   const menuItem = [
-    { key: "profile", label: "Profilo" },
-    { key: "orders", label: "I miei ordini" },
+    { key: "profile", label: <Link to="/profile">Profilo</Link> },
+    { key: "orders", label: <Link to="/orders">Ordini</Link> },
   ];
   const menuItemsAdmin = [
     {
@@ -56,13 +66,6 @@ const UserMenu = ({ user, logout }) => {
     ? [...menuItemsAdmin, ...logoutItem]
     : [...menuItem, ...logoutItem];
 
-  if (!user) {
-    return (
-      <Link to="/login">
-        <Button type="primary">Accedi/Registrati</Button>
-      </Link>
-    );
-  }
   return (
     <>
       <Dropdown
@@ -71,7 +74,7 @@ const UserMenu = ({ user, logout }) => {
         className="dropdown"
       >
         <div className="menu-user-logged">
-          {isAdmin ? <span>ADMIN</span> : <p>Ciao {user.user.firstName} !</p>}
+          {isAdmin ? <span>ADMIN</span> : <p>Ciao {user?.user?.firstName} !</p>}
         </div>
       </Dropdown>
     </>

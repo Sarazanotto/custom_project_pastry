@@ -69,26 +69,26 @@ const getAddress = async (req, res, next) => {
   }
 };
 
-const getAddressAdmin= async(req,res,next)=>{
-    try {
-       const {addressId} = req.params
-       const address= await addressService.getForAdmin(addressId)
-       if(!address){
-        throw new AddressNotFound()
-       }
-       res.status(200).send({
-        statusCode:200,
-        address
-       })
-    } catch (error) {
-        next(error)
+const getAddressAdmin = async (req, res, next) => {
+  try {
+    const { addressId } = req.params;
+    const address = await addressService.getForAdmin(addressId);
+    if (!address) {
+      throw new AddressNotFound();
     }
-}
+    res.status(200).send({
+      statusCode: 200,
+      address,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 
-module.exports={
-    create,
-    update,
-    deleteOne,
-    getAddress,
-    getAddressAdmin
-}
+module.exports = {
+  create,
+  update,
+  deleteOne,
+  getAddress,
+  getAddressAdmin,
+};

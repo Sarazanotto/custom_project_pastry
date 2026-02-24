@@ -1,29 +1,28 @@
 import { Row, Spin } from "antd";
-import { useEffect,useState } from "react";
-import "./cakes.css";
+import { useEffect, useState } from "react";
+import LoadingSpinner from '../../../costum/LoadingSpinner'
 import CardCake from "./cardCake/CardCake";
-import useLoading from "../../../../hook/useLoading";
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import "./cakes.css";
 const SectionCakes = () => {
   const [cakes, setCakes] = useState([]);
-  const { loading, startLoading, stopLoading } = useLoading();
+  const [loading, setLoading] = useState(false);
 
   const getCakes = async () => {
-    startLoading();
+    setLoading(true); 
     try {
-      const res = await fetch(`http://localhost:4545/cakes`);
-      console.log("Status:", res.status); // Debug
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/cakes`);
+      
       if (!res.ok) {
         throw new Error("Errore nel caricamento delle torte");
       }
       const data = await res.json();
-      console.log("DATA:", data, typeof data, Array.isArray(data));
+  
       setCakes(data.cakes);
     } catch (error) {
       console.error("ERRORE", error);
     } finally {
-      stopLoading();
+      setLoading(false);
     }
   };
 
@@ -33,23 +32,23 @@ const SectionCakes = () => {
 
   return (
     <div className="container-section-cake">
-      <Row className="h2-link" >
+      <Row className="h2-link">
         <h2>Le nostre ultime creazioni</h2>
-        <Link to="/cakes">Esplora le nostre torte</Link>
+        <Link to="/cakes">Fatti ispirare per il tuo prossimo ordine...</Link>
       </Row>
-      <Spin spinning={loading} description="In caricamento">
+      <LoadingSpinner loading={loading}>
         <Row gutter={[30, 16]} justify='center'>
-          {cakes.slice(0,4).map((cake) => (
+          {cakes.slice(0, 4).map((cake) => (
             <CardCake
               key={cake._id}
               img={cake.image}
               title={cake.name}
               description={cake.description}
-              price={`€${cake.price}`}
+              price={cake.price}
             />
           ))}
         </Row>
-      </Spin>
+      </LoadingSpinner>
     </div>
   );
 };

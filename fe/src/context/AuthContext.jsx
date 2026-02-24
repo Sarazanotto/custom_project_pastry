@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserProfile = async (token) => {
     try {
-      const res = await fetch("http://localhost:4545/profile", {
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/profile`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -63,7 +63,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
-    console.log('🚪 Logout');
+    console.log('Logout');
     
     localStorage.removeItem('token');
     localStorage.removeItem('user');

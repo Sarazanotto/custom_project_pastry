@@ -1,20 +1,32 @@
 
 import "./hero.css";
+import { useNavigate } from 'react-router-dom';
+
 import { Button, Row } from "antd";
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleQuoteRequest = () => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    } else {
+      navigate('/quote/new');
+    }
+  };
   return (
     <Row className="section-hero">
  <div className="container-hero">
-        <img src="../../../../../assets/heroHomepage.jpg" alt="" />
+        <img src="../../../../../assets/heroHome.jpg" alt="" />
       </div>
       <div className="container-text-hero">
-        <h2>
+        <h1>
             Concediti una fetta di perfezione
-        </h2>
-        <p>Creiamo e personalizziamo torte per ogni evento</p>
+        </h1>
+        <p>Ogni creazione nasce dalle tue idee e prende forma per rendere unico il tuo evento.</p>
       
       
-        <Button type="primary">Richiedi un preventivo</Button>
+        <Button type="primary" onClick={handleQuoteRequest}>Richiedi un preventivo</Button>
       </div>
     </Row>
      

@@ -8,7 +8,9 @@ const getUser = async (req, res, next) => {
       user,
       statusCode: 200,
     });
-  } catch (error) {next(error)}
+  } catch (error) {
+    next(error);
+  }
 };
 
 const createUser = async (req, res, next) => {
@@ -56,21 +58,21 @@ const update = async (req, res, next) => {
   try {
     const { body } = req;
     const { id } = req.params;
+
     if (!id) {
       throw new UserNotFound();
     }
-    const user = await userService.updateUser(id, body);
+    const user = await userService.updateUserWithAddresses(id, body);
 
     res.status(200).send({
       statusCode: 200,
-      message: "Successfully modifies user",
+      message: "Successfully modified user",
       user,
     });
   } catch (error) {
     next(error);
   }
 };
-
 const deleteOne = async (req, res, next) => {
   try {
     const { id } = req.params;

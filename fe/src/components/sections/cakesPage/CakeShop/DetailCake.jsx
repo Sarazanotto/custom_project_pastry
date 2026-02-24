@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
-import'./detailCake.css'
+import { Empty } from "antd";
+import LoadingSpinner from "../../../costum/LoadingSpinner";
+import "./detailCake.css";
 const DetailCake = ({ cakeId, onClose }) => {
   const [cake, setCake] = useState(null);
   const [loading, setLoading] = useState(true);
   const getCake = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:4545/detail?id=${cakeId}`);
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/detail?id=${cakeId}`,
+      );
       if (!res.ok) {
         throw new Error("Errore nel caricamento delle torte");
       }
@@ -27,24 +31,23 @@ const DetailCake = ({ cakeId, onClose }) => {
 
   if (loading) {
     return (
-      <div style={{ textAlign: "center", padding: "20px" }}>
-        Caricamento dettagli...
+      <div className="detail-cake-loading">
+        <LoadingSpinner loading={loading} />
       </div>
     );
   }
 
   if (!cake) {
     return (
-      <div style={{ textAlign: "center", padding: "20px", color: "red" }}>
-        Torta non trovata
+      <div className="detail-cake-error">
+        <Empty description="Torta non trovata" />
       </div>
     );
   }
   return (
     <div className="modal-detail">
       <h2>{cake.name}</h2>
-      <img src={cake.image}
-      alt={cake.name}/>
+      <img src={cake.image} alt={cake.name} />
       <h3>Descrizione</h3>
       <p> {cake.description} </p>
       <h3>Ingredienti</h3>

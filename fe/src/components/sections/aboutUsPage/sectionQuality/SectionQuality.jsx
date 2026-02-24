@@ -7,10 +7,12 @@ const SectionQuality = () => {
       <Col span={8} className="container-text">
         <h2>La qualità che ci distingua</h2>
         <p>
-          La qualità è il nostro ingrediente principale. Selezioniamo prodotti a
-          km0, freschi e genuini, per garantire sapori autentici. Offriamo anche
-          ingredienti biologici e opzioni vegan, senza compromessi sul gusto.
-          Ogni dolce nasce dal rispetto per chi lo assaggia e per l’ambiente.
+          La qualità è il nostro ingrediente principale. Utilizziamo materie
+          prime selezionate a km0, fresche e genuine, per garantire sapori
+          autentici e naturali. Offriamo anche opzioni senza latte, senza
+          glutine e completamente vegane, senza mai rinunciare al gusto. Ogni
+          dolce nasce dall’attenzione verso chi lo assapora e dal rispetto per
+          l’ambiente.
         </p>
         <h2>Il cioccolato</h2>
         <p>

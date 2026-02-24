@@ -8,7 +8,7 @@ const getCakes = async (req, res, next) => {
       pageSize,
     );
     if (cakes.length === 0) {
-      throw new Error('There is not cakes');
+      throw new Error("There is not cakes");
     }
     res.status(200).send({
       statusCode: 200,
@@ -48,57 +48,60 @@ const upload = async (req, res, next) => {
   }
 };
 
-const modify= async(req,res,next)=>{
+const modify = async (req, res, next) => {
   try {
-    const {cakeId}=req.params
-const {body}=req
-const cake= await cakeService.modifyCake(cakeId,body)
-res.status(200).send({
-  statusCode:200,
-  message: 'Successfully modified cake',
-  cake
-})
-  } catch (error) {
-    next(error)
-  }
-}
-
-const deleteOne= async(req,res,next)=>{
-  try {
-    const {cakeId}= req.params
-    const cake= await cakeService.deleteCake(cakeId)
+    const { cakeId } = req.params;
+    const { body } = req;
+    const cake = await cakeService.modifyCake(cakeId, body);
     res.status(200).send({
-      statusCode:200,
-      message:'Cake deleted successfully',
-      cake
-    })
+      statusCode: 200,
+      message: "Successfully modified cake",
+      cake,
+    });
   } catch (error) {
-    next(error)
+    next(error);
   }
-}
+};
 
-const getCakeId= async (req,res,next)=>{
+const deleteOne = async (req, res, next) => {
   try {
-    const {id}= req.query
-   if(!id){
-    return res.status(400).json({
-      statusCode:400,message: 'There is not ID'    })
-   }
-    const cake= await cakeService.cakeId(id)
-if(!cake){
-  return res.status(404).json({
-    statusCode:404, message:'Cake not found'
-  })
-}
+    const { cakeId } = req.params;
+    const cake = await cakeService.deleteCake(cakeId);
+    res.status(200).send({
+      statusCode: 200,
+      message: "Cake deleted successfully",
+      cake,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getCakeId = async (req, res, next) => {
+  try {
+    const { id } = req.query;
+    if (!id) {
+      return res.status(400).json({
+        statusCode: 400,
+        message: "There is not ID",
+      });
+    }
+    const cake = await cakeService.cakeId(id);
+    if (!cake) {
+      return res.status(404).json({
+        statusCode: 404,
+        message: "Cake not found",
+      });
+    }
 
     res.status(200).json({
       cake,
       statusCode: 200,
     });
   } catch (error) {
-    next(error)
+    next(error);
   }
-}
+};
 module.exports = {
   getCakes,
   getCakeId,

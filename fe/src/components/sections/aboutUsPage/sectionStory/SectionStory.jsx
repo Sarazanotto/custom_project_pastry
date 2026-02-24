@@ -11,10 +11,11 @@ const SectionStory = () => {
       <Col span={7} className="container-text">
         <h2>Una passione nata dall'amore</h2>
         <p>
-          L’amore per le torte nasce dalla cura di ogni dettaglio. Ogni impasto
-          è un gesto di passione e creatività. Decoriamo con il cuore,
-          trasformando idee in emozioni. Per noi, una torta è molto più di un
-          dolce: è un atto d’amore.
+          Realizziamo esclusivamente torte su ordinazione, completamente
+          personalizzate. Ogni creazione nasce dalle tue idee e prende forma per
+          rendere unico il tuo evento. Matrimoni, compleanni, battesimi o
+          occasioni speciali: raccontaci il tuo sogno e trasformeremo la tua
+          occasione in un momento indimenticabile.
         </p>
         <h2>La tua storia, la tua torta</h2>
         <p>

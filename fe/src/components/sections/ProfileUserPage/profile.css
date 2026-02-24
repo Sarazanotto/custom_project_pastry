@@ -1,0 +1,22 @@
+.profile-container{
+    margin-top: 30px;
+}
+
+.profile-container .ant-card{
+    box-shadow: 1px 10px 10px 8px #ece9e1;
+}
+.calendar{
+    width: 100%;
+}
+.date-create-account{
+    text-align: center;
+    color: #a8816392;
+}
+.title-card-profile{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-card-profile button{
+    padding: 0 4px !important;
+}
