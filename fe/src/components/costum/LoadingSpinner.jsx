@@ -1,12 +1,11 @@
-import { Spin } from 'antd'
-import React from 'react'
+import { Spin } from "antd";
 
-const LoadingSpinner = ({children, loading}) => {
+const LoadingSpinner = ({ children, loading }) => {
   return (
-   <Spin spinning={loading} size='large'>
-    {children}
-   </Spin>
-  )
-}
+    <Spin spinning={loading} size="large">
+      {children}
+    </Spin>
+  );
+};
 
-export default LoadingSpinner
+export default LoadingSpinner;

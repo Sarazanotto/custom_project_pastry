@@ -19,7 +19,7 @@ const CardCakes = ({ id, img, title, description, price }) => {
         className="card-cake"
         cover={<img draggable={false} src={img} alt={title} />}
         actions={[
-          <span onClick={showModal} key="details">Dettagli</span>
+          <small onClick={showModal} key="details">Dettagli</small>
         ]}
       >
         <p>{title}</p>

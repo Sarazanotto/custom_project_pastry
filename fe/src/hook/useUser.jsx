@@ -1,7 +1,7 @@
 const useUser = () => {
   const createUser = async (newUser) => {
     try {
-      const res = await fetch("http://localhost:4545/user", {
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/user`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -26,14 +26,17 @@ const useUser = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`http://localhost:4545/user/${userId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/user/${userId}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(updatedData),
         },
-        body: JSON.stringify(updatedData),
-      });
+      );
 
       if (!res.ok) {
         throw new Error(errorResponse.message);
@@ -42,32 +45,33 @@ const useUser = () => {
       const data = await res.json();
       return data;
     } catch (error) {
-      
       throw error;
     }
   };
 
   const deletUser = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:4545/user/${userId}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+      const response = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/user/${userId}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
         },
-      });
+      );
       if (!res.ok) {
         throw new Error(errorResponse.message);
       }
       return true;
     } catch (error) {
-    
       throw error;
     }
   };
   return {
     createUser,
     updateUser,
-    deletUser
+    deletUser,
   };
 };
 

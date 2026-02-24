@@ -10,7 +10,7 @@ const ContactPage = () => {
         <Row className="container-section-contact">
           <h2>Dove siamo</h2>
           <p>
-            Via Roma 24, 20100 Milano
+            Via Roma, 10 - 35100 Padova (PD)
             <br />
             (A due passi da Piazza Centrale – parcheggio disponibile nelle vie
             adiacenti)
@@ -36,7 +36,6 @@ const ContactPage = () => {
               <img src="../../../../assets/logoFB.png" alt="facebook" />
             </a>
             <a href="https://www.instagram.com">
-              {" "}
               <img src="../../../../assets/logoInsta.png" alt="instagram" />
             </a>
           </div>

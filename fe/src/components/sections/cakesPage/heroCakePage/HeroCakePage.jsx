@@ -18,7 +18,7 @@ const HeroCakePage = () => {
         <img src="../../../../../assets/heroCakesPage.jpg" alt="" />
       </div>
       <div className="container-text-hero-cake">
-        <h2>Fatti ispirare</h2>
+        <h1>Fatti ispirare</h1>
         <p>
           Ogni creazione è unica e personalizzata in base alle richieste dei
           nostri clienti. Sfoglia le nostre realizzazioni per trovare

@@ -1,9 +1,7 @@
-
 import { Menu } from "antd";
-import './header.css'
-import {Link} from 'react-router-dom'
+import "./header.css";
+import { Link } from "react-router-dom";
 const NavBar = () => {
-  
   const items = [
     {
       label: <Link to="/">Home</Link>,
@@ -18,7 +16,7 @@ const NavBar = () => {
       key: "aboutUs",
     },
     {
-      label: <Link to='/contact'>Contact</Link>,
+      label: <Link to="/contact">Contact</Link>,
       key: "contact",
     },
   ];

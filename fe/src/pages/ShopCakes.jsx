@@ -1,14 +1,13 @@
-import React from 'react'
-import AllCakes from '../components/sections/cakesPage/CakeShop/AllCakes'
-import HeroCakePage from '../components/sections/cakesPage/hero/HeroCakePage'
+import AllCakes from "../components/sections/cakesPage/CakeShop/AllCakes";
+import HeroCakePage from "../components/sections/cakesPage/heroCakePage/HeroCakePage";
 
 const ShopCakes = () => {
   return (
     <div>
-      <HeroCakePage/>
-  <AllCakes/>
+      <HeroCakePage />
+      <AllCakes />
     </div>
-  )
-}
+  );
+};
 
-export default ShopCakes
+export default ShopCakes;

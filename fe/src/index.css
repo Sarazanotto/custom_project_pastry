@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
 * {
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Delius", cursive;
 }
 
 body {
@@ -26,18 +27,27 @@ body {
 .layout-footer {
   margin-top: auto;
 }
+
 h1 {
   color: #361a00;
-  font-size: 2em;
+  font-size: 3em;
+  font-weight: 600;
+  line-height: normal;
 }
 h2 {
   color: #361a00;
-  font-size: 1.7em;
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.3em;
+  
 }
 
 a,
 .ant-btn-link {
   color: #8e694d;
+  font-size: 1.4em;
 }
 
 a:hover,
@@ -45,6 +55,26 @@ a:hover,
   color: #361a00 !important;
 }
 
-p{
-  
+.ant-modal-confirm .ant-btn-primary {
+  background-color: #a88163 !important;
+  border-color: #a88163 !important;
+}
+
+.ant-modal-confirm .ant-btn-primary:hover {
+  background-color: #8e694d !important;
+  border-color: #8e694d !important;
+}
+
+.ant-modal-confirm .ant-btn-dangerous {
+  color: #c0392b !important;
+  border-color: #c0392b !important;
+}
+.ant-modal-confirm .ant-btn-dangerous:hover {
+  color: #c0392b !important;
+  border-color: #c0392b !important;
+}
+
+.ant-modal-confirm .ant-btn-default:hover {
+  color: #a88163 !important;
+  border-color: #a88163 !important;
 }

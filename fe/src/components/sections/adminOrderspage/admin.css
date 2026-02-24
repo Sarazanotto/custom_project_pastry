@@ -1,0 +1,69 @@
+/*ADMIN-ORDER-CARD*/
+.card-title-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-body-admin {
+  margin-bottom: 16px;
+}
+
+.container-status-quote {
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.container-status-quote p {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+.status-confirmed {
+  border: 1px solid #b7eb8f;
+  color: green;
+}
+
+.status-rejected {
+  border: 1px solid #eb8f8f;
+  color: red;
+}
+
+.status-pending {
+  border: 1px solid #ffd591;
+  color: orange;
+}
+
+/*QUOTE-MODAL*/
+.modal-quote-admin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container-data-user {
+  background-color: #ece9e1;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.container-data-user p {
+  margin: 0;
+  line-height: 40px;
+}
+
+/*ORDER-LIST*/
+.page-order-admin {
+  display: flex;
+  margin-top: 50px;
+}
+.container-empty{
+  padding: 50px;
+  text-align: center;
+}
+
+/*ADMIN-ORDER-PAGE*/
+.admin-orders-page {
+  padding: 40px 20px;
+  margin: 0 40px;
+}

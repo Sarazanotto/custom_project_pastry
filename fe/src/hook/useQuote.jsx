@@ -1,17 +1,14 @@
 import { useState, useCallback } from "react";
 import { message } from "antd";
 
-const API_URL = import.meta.env.VITE_SERVER_URL;
-
 const useQuote = () => {
   const [loading, setLoading] = useState(false);
   const [quotes, setQuotes] = useState([]);
 
-  // Ottieni tutti i preventivi dell'utente
   const fetchUserQuotes = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_URL}/quotes`, {
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/quotes`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -33,11 +30,10 @@ const useQuote = () => {
     }
   }, []);
 
-  // Crea nuovo preventivo
   const createQuote = async (quoteData) => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_URL}/quotes`, {
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/quotes`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +48,7 @@ const useQuote = () => {
 
       const data = await res.json();
       message.success("Preventivo creato con successo!");
-      await fetchUserQuotes(); // ricarica lista
+      await fetchUserQuotes();
       return data;
     } catch (error) {
       console.error("Errore:", error);
@@ -63,18 +59,20 @@ const useQuote = () => {
     }
   };
 
-  // Aggiorna preventivo
   const updateQuote = async (quoteId, quoteData) => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_URL}/quotes/${quoteId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/quotes/${quoteId}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify(quoteData),
         },
-        body: JSON.stringify(quoteData),
-      });
+      );
 
       if (!res.ok) {
         throw new Error("Errore nell'aggiornamento del preventivo");
@@ -82,7 +80,7 @@ const useQuote = () => {
 
       const data = await res.json();
       message.success("Preventivo aggiornato!");
-      await fetchUserQuotes(); // ricarica lista
+      await fetchUserQuotes();
       return data;
     } catch (error) {
       console.error("Errore:", error);
@@ -93,32 +91,36 @@ const useQuote = () => {
     }
   };
 
-  // ✅ Conferma preventivo
   const confirmQuote = async (quoteId) => {
     setLoading(true);
     try {
       console.log("Confermando preventivo:", quoteId);
-      
-      const res = await fetch(`${API_URL}/quotes/${quoteId}/confirm`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/quotes/${quoteId}/confirm`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify({ confirm: true }),
         },
-        body: JSON.stringify({ confirm: true }), // ✅ IMPORTANTE!
-      });
+      );
 
       if (!res.ok) {
         const errorData = await res.json();
         console.error("Errore response:", errorData);
-        throw new Error(errorData.message || "Errore nella conferma del preventivo");
+        throw new Error(
+          errorData.message || "Errore nella conferma del preventivo",
+        );
       }
 
       const data = await res.json();
       console.log("Preventivo confermato:", data);
-      
+
       message.success("Preventivo confermato!");
-      await fetchUserQuotes(); // ricarica lista
+      await fetchUserQuotes();
       return data;
     } catch (error) {
       console.error("Errore conferma:", error);
@@ -129,32 +131,36 @@ const useQuote = () => {
     }
   };
 
-  // ✅ Rifiuta preventivo
   const rejectQuote = async (quoteId) => {
     setLoading(true);
     try {
       console.log("Rifiutando preventivo:", quoteId);
-      
-      const res = await fetch(`${API_URL}/quotes/${quoteId}/confirm`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/quotes/${quoteId}/confirm`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify({ confirm: false }),
         },
-        body: JSON.stringify({ confirm: false }), // ✅ IMPORTANTE!
-      });
+      );
 
       if (!res.ok) {
         const errorData = await res.json();
         console.error("Errore response:", errorData);
-        throw new Error(errorData.message || "Errore nel rifiuto del preventivo");
+        throw new Error(
+          errorData.message || "Errore nel rifiuto del preventivo",
+        );
       }
 
       const data = await res.json();
       console.log("Preventivo rifiutato:", data);
-      
+
       message.success("Preventivo rifiutato");
-      await fetchUserQuotes(); // ricarica lista
+      await fetchUserQuotes();
       return data;
     } catch (error) {
       console.error("Errore rifiuto:", error);
@@ -165,23 +171,25 @@ const useQuote = () => {
     }
   };
 
-  // Elimina preventivo
   const deleteQuote = async (quoteId) => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_URL}/quotes/${quoteId}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/quotes/${quoteId}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
         },
-      });
+      );
 
       if (!res.ok) {
         throw new Error("Errore nell'eliminazione del preventivo");
       }
 
       message.success("Preventivo eliminato!");
-      await fetchUserQuotes(); // ricarica lista
+      await fetchUserQuotes();
       return await res.json();
     } catch (error) {
       console.error("Errore:", error);
@@ -198,8 +206,8 @@ const useQuote = () => {
     fetchUserQuotes,
     createQuote,
     updateQuote,
-    confirmQuote,  // ✅ Export
-    rejectQuote,   // ✅ Export  
+    confirmQuote,
+    rejectQuote,
     deleteQuote,
   };
 };

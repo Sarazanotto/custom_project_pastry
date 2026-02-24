@@ -17,7 +17,7 @@
 }
 
 .logo-footer {
-  width: 120px;
+  width: 150px;
 }
 
 .container-footer a {
@@ -28,4 +28,12 @@
   font-size: 20px;
   padding-right: 10px;
   padding-top: 20px;
+}
+
+.logo-description{
+  text-align: center;
+}
+
+.link-email{
+  font-size: 1em;
 }

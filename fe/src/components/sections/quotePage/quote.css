@@ -44,3 +44,12 @@
   display:flex;
   gap:10px
 }
+
+.card-order-user .ant-card{
+  margin-top: 30px;
+  height: 100%;
+}
+
+.btns-quote-card button{
+ margin-bottom: 10px;
+}

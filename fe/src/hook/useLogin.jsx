@@ -12,7 +12,7 @@ const useLogin = () => {
     setAuthError(null);
 
     try {
-      const response = await fetch(`http://localhost:4545/login`, {
+      const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/login`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -27,7 +27,7 @@ const useLogin = () => {
 
       const data = await response.json();
 
-      const profileResponse = await fetch(`http://localhost:4545/profile`, {
+      const profileResponse = await fetch(`${import.meta.env.VITE_SERVER_URL}/profile`, {
         headers: {
           Authorization: `Bearer ${data.token}`,
         },

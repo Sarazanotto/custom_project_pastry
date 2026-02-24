@@ -14,8 +14,8 @@ export const AuthProvider = ({ children }) => {
       });
         if (res.status === 401 || res.status === 404) {
     
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
         setUser(null);
         return;
       }
@@ -33,40 +33,40 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const loggedUser= localStorage.getItem('user')
+    const loggedUser= localStorage.getItem("user")
     if (token && loggedUser) {
        try {
        
         const parsedUser = JSON.parse(loggedUser);
-        setUser(parsedUser);
-      
+        setUser(parsedUser)
+  
       } catch (e) {
-        console.error('Error', e);
-        localStorage.removeItem('user');
-        localStorage.removeItem('token');
+        console.error("Error", e);
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
       }
     }
     
-    setLoading(false);
+        setLoading(false);
   },[]);
 
 
  const login = (userData, token) => {
-   console.log(userData,'LOGIN EFFETUATO')
+   console.log(userData,"LOGIN EFFETUATO")
     
     
     setUser(userData);
     
    
-    localStorage.setItem('token', token);
-    localStorage.setItem('user', JSON.stringify(userData));
+    localStorage.setItem("token", token);
+    localStorage.setItem("user", JSON.stringify(userData));
   };
 
   const logout = () => {
-    console.log('Logout');
+    console.log("Logout");
     
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setUser(null);
   };
 

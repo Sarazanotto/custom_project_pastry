@@ -33,20 +33,28 @@ const LoginPage = () => {
     } catch (error) {
       console.log(error);
       form.setFields([
-        { name: "email",
-         
-           errors: ["Email o password non sono corretti"] },
-        { name: "password", 
-         
-          errors: ["Email o password non sono corretti"] },
-    
+        {
+          name: "email",
+
+          errors: ["Email o password non sono corretti"],
+        },
+        {
+          name: "password",
+
+          errors: ["Email o password non sono corretti"],
+        },
       ]);
-      console.log("Form prop esiste?", form ? "SÌ" : "NO")
+      console.log("Form prop esiste?", form ? "SÌ" : "NO");
     } finally {
       setLoading(false);
     }
   };
-
+  const onClickGoogle = () => {
+    window.location.href = `${import.meta.env.VITE_SERVER_URL}/google`;
+  };
+  const onClickFacebook = () => {
+    window.location.href = `${import.meta.env.VITE_SERVER_URL}/facebook`;
+  };
   return (
     <div className="container-login-form">
       <Row justify="center" align="middle" className="form-page">
@@ -61,7 +69,7 @@ const LoginPage = () => {
             <Row justify="center" align="middle">
               <Col span={24}>
                 <Form
-                form={form}
+                  form={form}
                   name="login"
                   layout="vertical"
                   initialValues={{ remember: true }}
@@ -112,18 +120,28 @@ const LoginPage = () => {
 
             <Row justify="center" gutter={16} className="social-icon">
               <Col>
-                <Button icon={<GoogleOutlined />} size="large" type="primary">
+                <Button
+                  icon={<GoogleOutlined />}
+                  size="large"
+                  type="primary"
+                  onClick={onClickGoogle}
+                >
                   Google
                 </Button>
               </Col>
               <Col>
-                <Button icon={<FacebookOutlined />} size="large" type="primary">
+                <Button
+                  icon={<FacebookOutlined />}
+                  size="large"
+                  type="primary"
+                  onClick={onClickFacebook}
+                >
                   Facebook
                 </Button>
               </Col>
             </Row>
 
-            <Row justify="center" align="middle" style={{ marginTop: 16 }}>
+            <Row justify="center" align="middle">
               <Col>
                 <p>
                   Non hai un account?

@@ -1,17 +1,17 @@
 
 import "./hero.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import { Button, Row } from "antd";
 const Hero = () => {
   const navigate = useNavigate();
 
   const handleQuoteRequest = () => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (!token) {
-      navigate('/login');
+      navigate("/login");
     } else {
-      navigate('/quote/new');
+      navigate("/quote/new");
     }
   };
   return (
@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
       <div className="container-text-hero">
         <h1>
-            Concediti una fetta di perfezione
+            Creazione di torte personalizzate
         </h1>
         <p>Ogni creazione nasce dalle tue idee e prende forma per rendere unico il tuo evento.</p>
       

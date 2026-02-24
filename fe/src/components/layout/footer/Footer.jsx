@@ -12,49 +12,47 @@ import {
 const Footer = () => {
   return (
     <div className="container-footer">
-      <Row justify="space-evenly" gutter={0}>
-        <Col>
+      <Row justify="center" gutter={[0, 24]}>
+        <Col xs={24} md={12} className="logo-description">
           <img className="logo-footer" src="../../../../assets/logo.png" />
           <p>La tua pasticceria di fiducia</p>
         </Col>
-        
-        <Col orientation="vertical">
+
+        <Col xs={24} md={12} orientation="vertical">
           <Space orientation="vertical" size="small">
             <span>
-              {" "}
-              <EnvironmentOutlined /> Via Giacomo Rossi 81,Milano{" "}
+              <EnvironmentOutlined /> Via Roma, 10 - 35100 Padova (PD)
             </span>
             <span>
-              {" "}
-              <PhoneOutlined /> +39 4456789441{" "}
+              <PhoneOutlined /> +39 4456789441
             </span>
-            <span>
-              {" "}
-              <MailOutlined /> pastrylab@lab.com{" "}
-            </span>
+            <a className="link-email" href="mailto:pastrylab@lab.com">
+              <MailOutlined /> pastrylab@lab.com
+            </a>
           </Space>
 
-          <Col className="social-footer">
+          <div className="social-footer">
             <Space size="small">
-              <span>
-                <InstagramOutlined />{" "}
-              </span>
-              <span>
-                {" "}
-                <FacebookOutlined />{" "}
-              </span>
-              <span>
-                {" "}
-                <WhatsAppOutlined />{" "}
-              </span>
+              <a href="https://www.facebook.com">
+                <FacebookOutlined />
+              </a>
+              <a href="https://www.instagram.com">
+                <InstagramOutlined />
+              </a>
+
+              <a href="https://wa.me/3479759122">
+                <WhatsAppOutlined />
+              </a>
             </Space>
-          </Col>
+          </div>
         </Col>
       </Row>
 
       <Row justify="space-between" gutter={0}>
         <Col>
-          © {new Date().getFullYear()} PastryLab tutti i diritti riservati.
+          <small>
+            © {new Date().getFullYear()} PastryLab tutti i diritti riservati.
+          </small>
         </Col>
         <Col>
           <Space size="small">

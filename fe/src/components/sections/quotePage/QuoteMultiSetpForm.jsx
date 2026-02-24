@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { Steps, Button, Form, message } from 'antd'; 
-import { useNavigate } from 'react-router-dom';
-import useQuote from '../../../hook/useQuote';
-import  useAddress  from '../../../hook/useAddress';
-import StepEvent from './steps/StepsEvent';
-import StepCakeDetails from './steps/StepCakeDetail';
-import StepAddress from './steps/StepAddress';
-import StepNotes from './steps/StepNotes';
-import StepSummary from './steps/StepSummary';
-import './quote.css'
+import { useState } from "react";
+import { Steps, Button, Form, message } from "antd"; 
+import { useNavigate } from "react-router-dom";
+import useQuote from "../../../hook/useQuote";
+import  useAddress  from "../../../hook/useAddress";
+import StepEvent from "./steps/StepsEvent";
+import StepCakeDetails from "./steps/StepCakeDetail";
+import StepAddress from "./steps/StepAddress";
+import StepNotes from "./steps/StepNotes";
+import StepSummary from "./steps/StepSummary";
+import "./quote.css"
 
 const QuoteMultiStepForm = () => {
   const [current, setCurrent] = useState(0);
@@ -19,11 +19,11 @@ const QuoteMultiStepForm = () => {
   const { createAddress } = useAddress();
 
   const steps = [
-    { title: 'Evento', content: <StepEvent /> },
-    { title: 'Torta', content: <StepCakeDetails /> },
-    { title: 'Indirizzo', content: <StepAddress /> },
-    { title: 'Note', content: <StepNotes /> },
-    { title: 'Riepilogo', content: <StepSummary data={formData} /> }
+    { title: "Evento", content: <StepEvent /> },
+    { title: "Torta", content: <StepCakeDetails /> },
+    { title: "Indirizzo", content: <StepAddress /> },
+    { title: "Note", content: <StepNotes /> },
+    { title: "Riepilogo", content: <StepSummary data={formData} /> }
   ];
 
   const next = async () => {
@@ -32,7 +32,7 @@ const QuoteMultiStepForm = () => {
       setFormData({ ...formData, ...values });
       setCurrent(current + 1);
     } catch (error) {
-      message.error('Compila tutti i campi obbligatori');
+      message.error("Compila tutti i campi obbligatori");
     }
   };
 
@@ -54,7 +54,7 @@ const QuoteMultiStepForm = () => {
         ? formData.deliveryData.toISOString() 
         : new Date().toISOString();
 
-      console.log('Dati preventivo da inviare:', {
+      console.log("Dati preventivo da inviare:", {
         event: formData.event,
         serving: formData.serving,
         deliveryData: deliveryDate,
@@ -63,11 +63,11 @@ const QuoteMultiStepForm = () => {
         cakeSoak: formData.cakeSoak,
         cakeCream: formData.cakeCream,
         cakeTopping: formData.cakeTopping,
-        cakeLettering: formData.cakeLettering || '',
-        cakeDecoration: formData.cakeDecoration || '',
-        allergies: formData.allergies || '',
-        otherNotes: formData.otherNotes || '',
-        exapleCake: formData.exapleCake || '',
+        cakeLettering: formData.cakeLettering || "",
+        cakeDecoration: formData.cakeDecoration || "",
+        allergies: formData.allergies || "",
+        otherNotes: formData.otherNotes || "",
+        exapleCake: formData.exapleCake || "",
         address: addressId
       });
 
@@ -81,45 +81,42 @@ const QuoteMultiStepForm = () => {
         cakeSoak: formData.cakeSoak,
         cakeCream: formData.cakeCream,
         cakeTopping: formData.cakeTopping,
-        cakeLettering: formData.cakeLettering || '',
-        cakeDecoration: formData.cakeDecoration || '',
-        allergies: formData.allergies || '',
-        otherNotes: formData.otherNotes || '',
-        exapleCake: formData.exapleCake || '',
+        cakeLettering: formData.cakeLettering || "",
+        cakeDecoration: formData.cakeDecoration || "",
+        allergies: formData.allergies || "",
+        otherNotes: formData.otherNotes || "",
+        exapleCake: formData.exapleCake || "",
         address: addressId
       });
-
-      console.log('Preventivo creato:', result);
       
-  
-      message.success('Preventivo richiesto con successo!');
+      message.success("La richiesta del preventivo è andata a buon fine");
       
       setTimeout(() => {
-        navigate('/orders');
+        navigate("/orders");
       }, 500);
       
     } catch (error) {
-      console.error('Errore completo:', error);
-      message.error('Errore nella creazione del preventivo');
+      console.error("Errore completo:", error);
+      message.error("Errore nella creazione del preventivo");
     }
   };
 
   return (
-    <div className='container-multistep'>
+    <div className="container-multistep">
       <h1>Richiedi un Preventivo</h1>
       
-      <Steps current={current} className='steps-form'>
+      <Steps current={current} className="steps-form">
         {steps.map(item => (
           <Steps.Step key={item.title} title={item.title} />
         ))}
       </Steps>
 
       <Form form={form} layout="vertical" initialValues={formData}>
-        <div className='content-form'>
+        <div className="content-form">
           {steps[current].content}
         </div>
 
-        <div className='actions-form'>
+        <div className="actions-form">
           {current > 0 && (
             <Button onClick={prev}>Indietro</Button>
           )}

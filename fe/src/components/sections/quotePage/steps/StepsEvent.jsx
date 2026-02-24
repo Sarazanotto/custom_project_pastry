@@ -1,4 +1,4 @@
-import { Form, Input, DatePicker, Select } from 'antd';
+import { Form, Input, DatePicker, Select } from "antd";
 
 const StepEvent = () => {
   return (
@@ -6,14 +6,14 @@ const StepEvent = () => {
       <Form.Item
         name="event"
         label="Tipo di Evento"
-        rules={[{ required: true, message: 'Seleziona il tipo di evento' }]}
+        rules={[{ required: true, message: "Seleziona il tipo di evento" }]}
       >
         <Select placeholder="Seleziona l'evento">
           <Select.Option value="compleanno">Compleanno</Select.Option>
           <Select.Option value="matrimonio">Matrimonio</Select.Option>
           <Select.Option value="battesimo">Battesimo</Select.Option>
           <Select.Option value="comunione">Comunione</Select.Option>
-          <Select.Option value="comunione">Cresima</Select.Option>
+          <Select.Option value="cresima">Cresima</Select.Option>
           <Select.Option value="laurea">Laurea</Select.Option>
           <Select.Option value="altro">Altro</Select.Option>
         </Select>
@@ -22,7 +22,7 @@ const StepEvent = () => {
       <Form.Item
         name="serving"
         label="Numero di Persone"
-        rules={[{ required: true, message: 'Inserisci il numero di persone' }]}
+        rules={[{ required: true, message: "Inserisci il numero di persone" }]}
       >
         <Input type="number" min={2} placeholder="Es: 20" />
       </Form.Item>
@@ -30,7 +30,7 @@ const StepEvent = () => {
       <Form.Item
         name="deliveryData"
         label="Data di Consegna (almeno 5 giorni)"
-        rules={[{ required: true, message: 'Seleziona la data di consegna' }]}
+        rules={[{ required: true, message: "Seleziona la data di consegna" }]}
       >
         <DatePicker 
           format="DD/MM/YYYY"

@@ -15,9 +15,7 @@ const UserMenu = ({ user, logout }) => {
     if (e.key === "orders") {
       navigate("/orders");
     }
-    if (e.key === "add-cake") {
-      navigate("/admin/add-cake");
-    }
+   
     if (e.key === "manage-cakes") {
       navigate("/admin/cakes");
     }
@@ -44,10 +42,7 @@ const UserMenu = ({ user, logout }) => {
       label: "Amministrazione",
       type: "group",
     },
-    {
-      key: "add-cake",
-      label: "Aggiungi Torta",
-    },
+   
     {
       key: "manage-cakes",
       label: "Gestisci Torte",
@@ -74,7 +69,7 @@ const UserMenu = ({ user, logout }) => {
         className="dropdown"
       >
         <div className="menu-user-logged">
-          {isAdmin ? <span>ADMIN</span> : <p>Ciao {user?.user?.firstName} !</p>}
+          {isAdmin ? <p>ADMIN</p> : <p>Ciao {user.user.firstName} !</p>}
         </div>
       </Dropdown>
     </>

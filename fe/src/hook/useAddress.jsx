@@ -7,7 +7,7 @@ const useAddress = () => {
   const [loading, setLoading] = useState(false);
   const [addresses, setAddresses] = useState([]);
 
-  // Ottieni tutti gli indirizzi
+
   const fetchAddresses = useCallback(async () => {
     setLoading(true);
     try {
@@ -33,7 +33,7 @@ const useAddress = () => {
     }
   },[]);
 
-  // Crea nuovo indirizzo
+
   const createAddress = async (addressData) => {
     setLoading(true);
     try {
@@ -52,7 +52,7 @@ const useAddress = () => {
 
       const data = await res.json();
       message.success("Indirizzo creato!");
-      await fetchAddresses(); // ricarica lista
+      await fetchAddresses(); 
       return data;
     } catch (error) {
       console.error("Errore:", error);
@@ -63,7 +63,7 @@ const useAddress = () => {
     }
   };
 
-  // Aggiorna indirizzo
+
   const updateAddress = async (addressId, addressData) => {
     setLoading(true);
     try {
@@ -82,7 +82,7 @@ const useAddress = () => {
 
       const data = await res.json();
       message.success("Indirizzo aggiornato!");
-      await fetchAddresses(); // ricarica lista
+      await fetchAddresses(); 
       return data;
     } catch (error) {
       console.error("Errore:", error);
@@ -93,7 +93,7 @@ const useAddress = () => {
     }
   };
 
-  // Elimina indirizzo
+
   const deleteAddress = async (addressId) => {
     setLoading(true);
     try {
@@ -109,7 +109,7 @@ const useAddress = () => {
       }
 
       message.success("Indirizzo eliminato!");
-      await fetchAddresses(); // ricarica lista
+      await fetchAddresses(); 
       return await res.json();
     } catch (error) {
       console.error("Errore:", error);

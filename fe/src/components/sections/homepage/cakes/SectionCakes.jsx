@@ -1,6 +1,6 @@
-import { Row, Spin } from "antd";
+import { Row } from "antd";
 import { useEffect, useState } from "react";
-import LoadingSpinner from '../../../costum/LoadingSpinner'
+import LoadingSpinner from "../../../costum/LoadingSpinner"
 import CardCake from "./cardCake/CardCake";
 import { Link } from "react-router-dom";
 import "./cakes.css";
@@ -30,6 +30,9 @@ const SectionCakes = () => {
     getCakes();
   }, []);
 
+  const randomCakes= (cakes, count=4)=>{
+    return [...cakes].sort(()=>Math.random()-0.5).slice(0,count)
+  }
   return (
     <div className="container-section-cake">
       <Row className="h2-link">
@@ -37,8 +40,8 @@ const SectionCakes = () => {
         <Link to="/cakes">Fatti ispirare per il tuo prossimo ordine...</Link>
       </Row>
       <LoadingSpinner loading={loading}>
-        <Row gutter={[30, 16]} justify='center'>
-          {cakes.slice(0, 4).map((cake) => (
+        <Row gutter={[30, 16]} justify="center">
+          {randomCakes(cakes).map((cake) => (
             <CardCake
               key={cake._id}
               img={cake.image}

@@ -1,6 +1,5 @@
-import { Row } from 'antd'
-import React from 'react'
-import './heroAbout.css'
+import { Row } from "antd"
+import "./heroAbout.css"
 const Hero = () => {
   return (
  <Row className="section-hero-about">

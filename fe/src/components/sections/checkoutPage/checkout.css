@@ -1,0 +1,41 @@
+
+.checkout-card {
+  max-width: 600px;
+  margin: 60px auto;
+}
+
+.checkout-card--small {
+  max-width: 500px;
+}
+
+
+.checkout-amount {
+  font-size: 1.2rem;
+}
+
+.checkout-total {
+  display: block;
+  margin-bottom: 24px;
+}
+
+
+.checkout-order-details {
+  margin-bottom: 20px;
+  background: #faf6f1;
+  border: none;
+}
+
+
+.checkout-alert {
+  margin-bottom: 16px;
+}
+
+
+.payment-form {
+  margin-top: 24px;
+}
+
+.payment-actions {
+  margin-top: 24px;
+  width: 100%;
+}
