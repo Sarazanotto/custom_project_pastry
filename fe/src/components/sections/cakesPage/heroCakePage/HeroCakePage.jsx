@@ -1,6 +1,8 @@
+import heroCakesPage from "../../../../../assets/heroCakesPage.jpg";
 import { useNavigate } from "react-router-dom";
 import "./heroCakePage.css";
 import { Row, Button } from "antd";
+
 const HeroCakePage = () => {
   const navigate = useNavigate();
 
@@ -15,7 +17,7 @@ const HeroCakePage = () => {
   return (
     <Row className="section-hero-cake">
       <div className="container-hero-cake">
-        <img src="../../../../../assets/heroCakesPage.jpg" alt="" />
+        <img src={heroCakesPage} alt="immagini di fette di torta " />
       </div>
       <div className="container-text-hero-cake">
         <h1>Fatti ispirare</h1>

@@ -1,4 +1,4 @@
-import React from "react";
+import logo from "../../../../assets/logo.png"
 import "./header.css";
 import { Row, Col } from "antd";
 
@@ -8,7 +8,7 @@ const Logo = () => {
       <Col>
         <img
           className="logo"
-          src="../../../assets/logo.png"
+          src={logo}
           alt="Logo dell apasticceria PastryLab"
         />
       </Col>

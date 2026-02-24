@@ -1,4 +1,5 @@
-import React from "react";
+import logoFB from "../../../../assets/logoFB.png"
+import logoInsta from "../../../../assets/logoInsta.png"
 import { Row } from "antd";
 import HeroContact from "./heroContact/Hero";
 import "./contactPage.css";
@@ -33,10 +34,10 @@ const ContactPage = () => {
           <h2>Seguici sui social</h2>
           <div>
             <a href="https://www.facebook.com">
-              <img src="../../../../assets/logoFB.png" alt="facebook" />
+              <img src={logoFB} alt="facebook" />
             </a>
             <a href="https://www.instagram.com">
-              <img src="../../../../assets/logoInsta.png" alt="instagram" />
+              <img src={logoInsta} alt="instagram" />
             </a>
           </div>
         </Row>

@@ -1,4 +1,7 @@
+import imageOne from "../../../../../assets/about_2.jpg"
+import imageTwo from "../../../../../assets/about_3.jpg"
 import { Row, Col } from "antd";
+
 import "./sectionStory.css";
 const SectionStory = () => {
   return (
@@ -6,9 +9,9 @@ const SectionStory = () => {
       <Row align="middle" justify="center" gutter={[32, 32]}>
         <Col xs={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
           <div className="container-imgs">
-            <img src="../../../../../assets/about_2.jpg" alt="" />
+            <img src={imageOne} alt="immagine di torta a piu piani con glassa viola e mirtilli freschi" />
 
-            <img src="../../../../../assets/about_3.jpg" alt="" />
+            <img src={imageTwo} alt="immagine di torta sopra un'alzatina di ceramica con frutta fresca" />
           </div>
         </Col>
 

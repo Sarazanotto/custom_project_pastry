@@ -1,4 +1,6 @@
-import React from "react";
+import imageOne from "../../../../../assets/about_1.jpg"
+import imageTwo from "../../../../../assets/about_4.jpg"
+
 import { Row, Col } from "antd";
 import "./sectionQuality.css";
 const SectionQuality = () => {
@@ -10,7 +12,7 @@ const SectionQuality = () => {
           md={{ span: 12, order: 2 }}
           className="container-text"
         >
-          <h2>La qualità che ci distingua</h2>
+          <h2>La qualità che ci distingue</h2>
           <p>
             La qualità è il nostro ingrediente principale. Offriamo opzioni
             senza latte, senza glutine e completamente vegane, senza mai
@@ -26,9 +28,9 @@ const SectionQuality = () => {
         </Col>
         <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
           <div className="container-imgs">
-            <img src="../../../../../assets/about_1.jpg" alt="" />
+            <img src={imageOne} alt="immagine di una naked cake con fragole e fiori freschi" />
 
-            <img src="../../../../../assets/about_4.jpg" alt="" />
+            <img src={imageTwo} alt="immagine di mani di pasticcere che toccano farina" />
           </div>
         </Col>
       </Row>

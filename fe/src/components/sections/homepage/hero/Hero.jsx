@@ -1,4 +1,4 @@
-
+import heroHome from "../../../../../assets/heroHome.jpg"
 import "./hero.css";
 import { useNavigate } from "react-router-dom";
 
@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <Row className="section-hero">
  <div className="container-hero">
-        <img src="../../../../../assets/heroHome.jpg" alt="" />
+        <img src={heroHome} alt="foto di torta con panna e frutti di bosco dall'alto" />
       </div>
       <div className="container-text-hero">
         <h1>

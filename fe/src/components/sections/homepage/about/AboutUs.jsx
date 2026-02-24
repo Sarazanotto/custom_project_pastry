@@ -1,4 +1,8 @@
 import { Col, Row } from "antd";
+import imageOne from "../../../../../assets/hompage.jpg"
+import imageTwo from "../../../../../assets/hompage2.jpg"
+import logoGlutenFree from "../../../../../assets/GLUTENFREE.png" 
+import logoLactoseFree from "../../../../../assets/LACTOSEFREE.png"
 
 import "./aboutUs.css";
 import { Link } from "react-router-dom";
@@ -7,8 +11,8 @@ const AboutUs = () => {
     <Row justify="start" align="middle" className="section-about">
       <Col xs={24} md={12}>
         <div className="container-imgs">
-          <img src="../../../../../assets/hompage.jpg" alt="" />
-          <img src="../../../../../assets/hompage2.jpg" alt="" />
+          <img src={imageOne} alt="Torta a tre piani rosa oro con fiori" />
+          <img src={imageTwo} alt=" foto di pasticcera che termina la decorazione di una torta" />
         </div>
       </Col>
       <Col xs={24} md={8}>
@@ -26,8 +30,8 @@ const AboutUs = () => {
             strato alla volta.
           </p>
           <div className="container-free-about">
-            <img src="../../../../assets/GLUTENFREE.png" alt="" />
-            <img src="../../../../assets/LACTOSEFREE.png" alt="" />
+            <img src={logoGlutenFree}alt="bollino gluten free" />
+            <img src={logoLactoseFree} alt="bollino senza lattosio" />
           </div>
         </div>
       </Col>

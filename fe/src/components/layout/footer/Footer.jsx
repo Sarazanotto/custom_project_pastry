@@ -1,4 +1,5 @@
 import { Col, Row, Space } from "antd";
+import logo from "../../../../assets/logo.png"
 import "./footer.css";
 import {
   EnvironmentOutlined,
@@ -14,7 +15,7 @@ const Footer = () => {
     <div className="container-footer">
       <Row justify="center" gutter={[0, 24]}>
         <Col xs={24} md={12} className="logo-description">
-          <img className="logo-footer" src="../../../../assets/logo.png" />
+          <img className="logo-footer" src={logo} />
           <p>La tua pasticceria di fiducia</p>
         </Col>
 
