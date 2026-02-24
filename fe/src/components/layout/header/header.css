@@ -12,7 +12,22 @@
 .user-col {
   display: flex;
   justify-content: center;
+  }
 
+  @media (max-width: 768px) {
+  .logo {
+    width: 130px;
+  }
+
+  .menu-user-logged p {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .ant-dropdown-trigger {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
 }
 
 .links-width {

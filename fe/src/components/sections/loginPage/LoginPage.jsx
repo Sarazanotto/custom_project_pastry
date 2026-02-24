@@ -145,8 +145,8 @@ const LoginPage = () => {
               <Col>
                 <p>
                   Non hai un account?
-                  <Button type="link" onClick={openModal}>
-                    Registrati
+                  <Button type="link" className="btn-registration" onClick={openModal}>
+                   Registrati
                   </Button>
                 </p>
               </Col>

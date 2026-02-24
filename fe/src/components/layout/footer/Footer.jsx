@@ -13,47 +13,54 @@ import {
 const Footer = () => {
   return (
     <div className="container-footer">
-      <Row justify="center" gutter={[0, 24]}>
-        <Col xs={24} md={12} className="logo-description">
+      <Row  className="sectio-footer" justify="center"
+  align="middle">
+        <Col xs={24} md={8} className="logo-description">
           <img className="logo-footer" src={logo} />
           <p>La tua pasticceria di fiducia</p>
         </Col>
 
-        <Col xs={24} md={12} orientation="vertical">
-          <Space orientation="vertical" size="small">
+        <Col
+          xs={24}
+          md={8}
+          className="container-contact"
+        >
+          <div   className="container-contact"> 
             <span>
-              <EnvironmentOutlined /> Via Roma, 10 - 35100 Padova (PD)
+              {" "}
+              <EnvironmentOutlined /> Via Giacomo Rossi 81,Milano{" "}
             </span>
             <span>
-              <PhoneOutlined /> +39 4456789441
+              {" "}
+              <PhoneOutlined /> +39 4456789441{" "}
             </span>
             <a className="link-email" href="mailto:pastrylab@lab.com">
               <MailOutlined /> pastrylab@lab.com
             </a>
-          </Space>
-
+          </div>
+        </Col>
+        <Col xs={24} md={8} >
           <div className="social-footer">
-            <Space size="small">
+           <div>
               <a href="https://www.facebook.com">
-                <FacebookOutlined />
+                <FacebookOutlined />{" "}
               </a>
               <a href="https://www.instagram.com">
                 <InstagramOutlined />
               </a>
 
               <a href="https://wa.me/3479759122">
-                <WhatsAppOutlined />
+                {" "}
+                <WhatsAppOutlined />{" "}
               </a>
-            </Space>
+         </div>
           </div>
         </Col>
       </Row>
 
       <Row justify="space-between" gutter={0}>
         <Col>
-          <small>
-            © {new Date().getFullYear()} PastryLab tutti i diritti riservati.
-          </small>
+          © {new Date().getFullYear()} PastryLab tutti i diritti riservati.
         </Col>
         <Col>
           <Space size="small">
