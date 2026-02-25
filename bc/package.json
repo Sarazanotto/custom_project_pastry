@@ -4,7 +4,8 @@
   "description": "backend for custom cake ordering project",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build":""
   },
   "author": "Sara Zanotto",
   "license": "ISC",
