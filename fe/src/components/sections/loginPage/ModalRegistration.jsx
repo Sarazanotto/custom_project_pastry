@@ -1,4 +1,3 @@
-import React from "react";
 import { Modal } from "antd";
 import FormRegistration from "./FormRegistration";
 import useUser from "../../../hook/useUser";

@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import useLogin from "../../../hook/useLogin";
-import ModalRegistration from "./modalRegistration";
+import ModalRegistration from "./ModalRegistration";
 import "./loginpage.css";
 
 const LoginPage = () => {
