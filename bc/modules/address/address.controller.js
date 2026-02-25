@@ -1,5 +1,5 @@
-const AddressNotFound = require("../../exception/address/addressNotFound");
-const UserNotFound = require("../../exception/user/userNotFound");
+const AddressNotFound = require("../../exception/address/AddressNotFound");
+
 
 const addressService = require("./address.service");
 
