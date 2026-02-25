@@ -39,7 +39,7 @@ const AdminOrderCard = ({ quote, onUpdate }) => {
     onUpdate(quote._id, { status: "completed", sendReadyEmail: true });
   };
 
-  const handleOpenaModal = () => {
+  const handleOpenModal = () => {
     setModalVisible(true);
   };
   const handleCloseModal = () => {
@@ -167,7 +167,7 @@ const AdminOrderCard = ({ quote, onUpdate }) => {
 
         <Space orientation="vertical">
           {quote.status === "pending" && (
-            <Button type="primary" onClick={handleOpenaModal}>
+            <Button type="primary" onClick={handleOpenModal}>
               Invia Preventivo
             </Button>
           )}
