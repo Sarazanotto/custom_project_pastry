@@ -1,7 +1,7 @@
 import { Row, Col, Empty } from "antd";
 
 import LoadingSpinner from "../../costum/LoadingSpinner";
-import CakeCardAdmin from "./CakeCardAdmin";
+import CakeCardAdmin from "./adminCake.css";
 
 const CakeList = ({ cakes, loading, onEdit, onDelete }) => {
   return (

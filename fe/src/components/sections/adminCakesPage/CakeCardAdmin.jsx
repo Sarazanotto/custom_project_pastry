@@ -1,6 +1,6 @@
 import { Col,Card, Button, Popconfirm, Tag } from "antd";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import "./AdminCakes.css"
+import "./adminCake.css"
 const { Meta } = Card;
 
 const CakeCardAdmin = ({ cake, onEdit, onDelete }) => {

@@ -4,7 +4,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import CakesList from "./CakeListAdmin";
 import CakeModal from "./CakeModalAdmin";
 import useCakes from "../../../hook/useCake";
-import "./adminCakes.css";
+import "./adminCake.css";
 
 const AdminCakes = () => {
   const { message } = App.useApp();
