@@ -1,0 +1,125 @@
+/*ADMIN-CAKE-PAGE*/
+.admin-cakes-section {
+  padding: 40px 20px;
+  margin: 0 40px;
+
+  
+}
+
+.admin-cakes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/*CAKE-LIST*/
+.cakes-list-container {
+  margin-top: 20px;
+}
+
+.cakes-loading,
+.cakes-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 50px;
+}
+
+/*CAKE-CARD*/
+.cake-card-admin {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cake-card-admin .ant-card-body {
+  flex: 1;
+}
+.cake-card-image-container {
+  height: 250px;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cake-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ant-card-hoverable:hover .cake-card-image {
+  transform: scale(1.05);
+}
+
+.cake-card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin-bottom: 12px;
+}
+.cake-card-title p{
+    font-size: 1em;
+}
+
+.cake-card-description {
+  color: #666;
+}
+
+.cake-description-text {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cake-card-details {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.cake-card-details p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.cake-card-details strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/*CAKE-MODAL*/
+.container-ingredients-modal {
+  display: flex;
+  margin-bottom: 8px;
+}
+.input-ingredients {
+  flex: 1;
+  margin-bottom: 0;
+  margin-right: 8px;
+}
+
+.img-modal-admin-cake {
+  margin-top: 16px;
+}
+
+.img-modal-admin-cake img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+}
+
+.circle-ingredients {
+  font-size: 20px;
+  color: #a88163;
+  cursor: pointer;
+}
