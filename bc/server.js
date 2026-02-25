@@ -22,7 +22,7 @@ const payemntRoute = require("./modules/payment/payment.route");
 const server = express();
 
 
-const allowedOrigins = ["https://nuovo.it"];
+const allowedOrigins = ["https://custom-project-pastrylab.vercel.app"];
 if (process.env.DEV_MODE) {
   allowedOrigins.push("http://localhost:5173");
 }
