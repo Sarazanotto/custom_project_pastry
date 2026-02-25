@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const startServer = require("./config/db");
-const PORT = 4545;
+const PORT = process.env.PORT ||4545;
 
 const tokenVerify = require("./middleware/auth/tokenVerify");
 const errorHandler = require("./middleware/errorHandler/errorHandler");
