@@ -9,4 +9,5 @@ class AddressNotFound extends HttpsException {
     super(statusCode, message, error);
   }
 }
-module.exports = AddressNotFound;
+
+module.exports = {AddressNotFound};
