@@ -1,18 +1,14 @@
 const nodemailer = require("nodemailer");
 
 const createTransport = async () => {
-
-    return nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-    });
-  
-
+  return nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD,
+    },
+  });
 };
 
 const sendQuoteEmail = async (userEmail, quoteData) => {
@@ -153,7 +149,7 @@ const sendQuoteEmail = async (userEmail, quoteData) => {
   `;
 
   const mailOptions = {
-    from: `"PastryLab" <${process.env.EMAIL_USER || "test@ethereal.email"}>`,
+    from: `"PastryLab" <${process.env.EMAIL_USER}>`,
     to: userEmail,
     subject: `Il tuo preventivo è pronto - €${quoteData.priceQuoted}`,
     html: htmlContent,
@@ -162,19 +158,14 @@ const sendQuoteEmail = async (userEmail, quoteData) => {
   try {
     const info = await transporter.sendMail(mailOptions);
 
-    if (process.env.USE_ETHEREAL === "true") {
-      const previewUrl = nodemailer.getTestMessageUrl(info);
+    const previewUrl = nodemailer.getTestMessageUrl(info);
 
-      console.log("VEDI EMAIL PREVENTIVO:", previewUrl);
-    }
+    console.log("VEDI EMAIL PREVENTIVO:", previewUrl);
 
     return {
       success: true,
       messageId: info.messageId,
-      previewUrl:
-        process.env.USE_ETHEREAL === "true"
-          ? nodemailer.getTestMessageUrl(info)
-          : null,
+      previewUrl: previewUrl,
     };
   } catch (error) {
     throw error;
@@ -232,18 +223,13 @@ const sendOrderConfirmation = async (userEmail, quoteData) => {
   try {
     const info = await transporter.sendMail(mailOptions);
 
-    if (process.env.USE_ETHEREAL === "true") {
-      const previewUrl = nodemailer.getTestMessageUrl(info);
-      console.log("VEDI EMAIL CONFERMA ORDINE:", previewUrl);
-    }
+    const previewUrl = nodemailer.getTestMessageUrl(info);
+    console.log("VEDI EMAIL CONFERMA ORDINE:", previewUrl);
 
     return {
       success: true,
       messageId: info.messageId,
-      previewUrl:
-        process.env.USE_ETHEREAL === "true"
-          ? nodemailer.getTestMessageUrl(info)
-          : null,
+      previewUrl: previewUrl,
     };
   } catch (error) {
     throw error;
@@ -319,18 +305,13 @@ const sendOrderReady = async (userEmail, quoteData) => {
   try {
     const info = await transporter.sendMail(mailOptions);
 
-    if (process.env.USE_ETHEREAL === "true") {
-      const previewUrl = nodemailer.getTestMessageUrl(info);
-      console.log("VEDI EMAIL ORDINE PRONTO:", previewUrl);
-    }
+    const previewUrl = nodemailer.getTestMessageUrl(info);
+    console.log("VEDI EMAIL ORDINE PRONTO:", previewUrl);
 
     return {
       success: true,
       messageId: info.messageId,
-      previewUrl:
-        process.env.USE_ETHEREAL === "true"
-          ? nodemailer.getTestMessageUrl(info)
-          : null,
+      previewUrl: previewUrl,
     };
   } catch (error) {
     throw error;
