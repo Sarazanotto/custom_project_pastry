@@ -1,8 +1,10 @@
 const nodemailer = require("nodemailer");
 
 const createTransport = async () => {
+  console.log(process.env.EMAIL_PASSWORD)
+  console.log(process.env.EMAIL_USER)
   return nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    host: "smtp-relay.brevo.com",
     port: 587,
     auth: {
       user: process.env.EMAIL_USER,
@@ -168,7 +170,9 @@ const sendQuoteEmail = async (userEmail, quoteData) => {
       previewUrl: previewUrl,
     };
   } catch (error) {
-    throw error;
+        console.log(error)
+    throw error
+
   }
 };
 
