@@ -114,7 +114,7 @@ const adminUpdateQuote = async (req, res, next) => {
 
     try {
       if (sendReadyEmail) {
-        await emailService.sendOrderReady(quote.user.email, {
+        await emailService.sendOrderReady("saraazanotto@gmail.com", {
           userName: `${quote.user.firstName} ${quote.user.lastName}`,
           event: quote.event,
           deliveryData: quote.deliveryData,
@@ -123,7 +123,7 @@ const adminUpdateQuote = async (req, res, next) => {
           adminNotes: quote.adminNotes,
         });
       } else {
-        await emailService.sendQuoteEmail(quote.user.email, {
+        await emailService.sendQuoteEmail("saraazanotto@gmail.com", {
           userName: `${quote.user.firstName} ${quote.user.lastName}`,
           event: quote.event,
           serving: quote.serving,
@@ -215,7 +215,7 @@ const markQuoteAsPaid = async (req, res, next) => {
 
     try {
       const populatedQuote = await quoteService.getQuoteById(quoteId);
-      await emailService.sendOrderConfirmation(populatedQuote.user.email, {
+      await emailService.sendOrderConfirmation("saraazanotto@gmail.com", {
         userName: `${populatedQuote.user.firstName} ${populatedQuote.user.lastName}`,
         event: populatedQuote.event,
         deliveryData: populatedQuote.deliveryData,
