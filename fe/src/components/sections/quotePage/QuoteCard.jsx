@@ -3,7 +3,6 @@ import {
   CheckOutlined,
   CloseOutlined,
   DeleteOutlined,
-  CreditCardOutlined,
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import dayjs from "dayjs";
@@ -123,15 +122,14 @@ const handleDelete = () => onDelete(quote._id);
               ) : (
                 <>
                   <div className="container-status-quote status-confirmed">
-                    <p>Ordine Confermato</p>
+                    <p>Preventivo confermato</p>
                   </div>
                   <Button
                     type="primary"
-                    icon={<CreditCardOutlined />}
                     onClick={handlePay}
-                    block
+                  className="btn-payemnt"
                   >
-                    Procedi al Pagamento → €{quote.priceQuoted}
+                    Effettua pagamento per avviare la produzione! → €{quote.priceQuoted}
                   </Button>
                 </>
               )}

@@ -53,3 +53,9 @@
 .btns-quote-card button{
  margin-bottom: 10px;
 }
+
+.btn-payemnt{
+  white-space: normal;
+height: auto;
+margin-top: 5px;
+}

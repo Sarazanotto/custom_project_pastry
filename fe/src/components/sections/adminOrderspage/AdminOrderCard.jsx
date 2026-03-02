@@ -70,8 +70,7 @@ const AdminOrderCard = ({ quote, onUpdate }) => {
       >
         <div className="card-body-admin">
           <p>
-            <strong>Cliente:</strong> {quote.user?.firstName}
-            {quote.user?.lastName}
+            <strong>Cliente:</strong> {quote.user?.firstName} {quote.user?.lastName}
           </p>
           <p>
             <strong>Email:</strong> {quote.user?.email}
