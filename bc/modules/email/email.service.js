@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 const createTransport = async () => {
-  if (process.env.USE_ETHEREAL === "true") {
+
     return nodemailer.createTransport({
       host: "smtp.ethereal.email",
       port: 587,
@@ -11,7 +11,7 @@ const createTransport = async () => {
         pass: process.env.EMAIL_PASSWORD,
       },
     });
-  }
+  
 
 };
 
