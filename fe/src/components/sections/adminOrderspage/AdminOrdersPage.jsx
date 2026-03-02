@@ -61,7 +61,7 @@ const AdminOrders = () => {
       <div className="admin-orders-page">
         <div className="admin-header">
           <h1>Gestione Ordini</h1>
-          <p>Gestisci tutti i preventivi e invia le quotazioni ai clienti</p>
+      
         </div>
         <Tabs items={tabs} />
       </div>
