@@ -137,7 +137,7 @@ const adminUpdateQuote = async (req, res, next) => {
           adminNotes: quote.adminNotes,
         });
       }
-    } catch (emailError) {}
+    } catch (emailError) {console.error("ERROREE EMAIL", emailError)}
 
     res.status(200).send({
       statusCode: 200,
