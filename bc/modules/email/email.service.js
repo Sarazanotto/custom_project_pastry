@@ -2,28 +2,17 @@ const nodemailer = require("nodemailer");
 
 const createTransport = async () => {
   if (process.env.USE_ETHEREAL === "true") {
-    const testAccount = await nodemailer.createTestAccount();
-
     return nodemailer.createTransport({
       host: "smtp.ethereal.email",
       port: 587,
       secure: false,
       auth: {
-        user: testAccount.user,
-        pass: testAccount.pass,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
   }
 
-  return nodemailer.createTransport({
-    host: process.env.EMAIL_HOST || "smtp.gmail.com",
-    port: process.env.EMAIL_PORT || 587,
-    secure: false,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
 };
 
 const sendQuoteEmail = async (userEmail, quoteData) => {
@@ -172,7 +161,6 @@ const sendQuoteEmail = async (userEmail, quoteData) => {
 
   try {
     const info = await transporter.sendMail(mailOptions);
- 
 
     if (process.env.USE_ETHEREAL === "true") {
       const previewUrl = nodemailer.getTestMessageUrl(info);
@@ -243,7 +231,6 @@ const sendOrderConfirmation = async (userEmail, quoteData) => {
 
   try {
     const info = await transporter.sendMail(mailOptions);
-  
 
     if (process.env.USE_ETHEREAL === "true") {
       const previewUrl = nodemailer.getTestMessageUrl(info);
