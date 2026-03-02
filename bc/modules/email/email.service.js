@@ -3,13 +3,11 @@ const nodemailer = require("nodemailer");
 const createTransport = async () => {
   console.log(process.env.EMAIL_PASSWORD)
   console.log(process.env.EMAIL_USER)
-  return nodemailer.createTransport({
-    host: "smtp-relay.brevo.com",
-    port: 587,
-    secure:false,
+ return nodemailer.createTransport({
+    service: "gmail",
     auth: {
       user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
+      pass: process.env.EMAIL_PASSWORD
     },
   });
 };
@@ -219,8 +217,8 @@ const sendOrderConfirmation = async (userEmail, quoteData) => {
   `;
 
   const mailOptions = {
-    from: `"PastryLab" <${process.env.EMAIL_USER || "test@ethereal.email"}>`,
-    to: userEmail,
+    from: `"PastryLab" <${process.env.EMAIL_USER}>`,
+    to: "saraazanotto@gmail.com",
     subject: "Ordine Confermato!",
     html: htmlContent,
   };
@@ -299,7 +297,7 @@ const sendOrderReady = async (userEmail, quoteData) => {
   `;
 
   const mailOptions = {
-    from: `"Pastrylab" <${process.env.EMAIL_USER || "test@ethereal.email"}>`,
+    from: `"Pastrylab" <${process.env.EMAIL_USER}>`,
     to: userEmail,
     subject: isDelivery
       ? "Il tuo ordine è in arrivo!"
