@@ -21,7 +21,7 @@ const AdminOrders = () => {
     fetchAllQuotes();
     const interval = setInterval(() => {
     fetchAllQuotes();
-  }, 15000);
+  }, 5000);
 
   return () => clearInterval(interval);
 }, [isAdmin, navigate, fetchAllQuotes]);
