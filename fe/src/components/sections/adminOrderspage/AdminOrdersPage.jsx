@@ -19,7 +19,13 @@ const AdminOrders = () => {
       return;
     }
     fetchAllQuotes();
-  }, [isAdmin, navigate, fetchAllQuotes]);
+    const interval = setInterval(() => {
+    fetchAllQuotes();
+  }, 15000);
+
+  return () => clearInterval(interval);
+}, [isAdmin, navigate, fetchAllQuotes]);
+  
 
   if (!isAdmin) {
     return (
